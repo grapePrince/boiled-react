@@ -1,0 +1,6131 @@
+@charset "UTF-8";
+body,
+button,
+dd,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+legend,
+li,
+menu,
+ol,
+p,
+select,
+table,
+td,
+textarea,
+th,
+ul {
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: none
+}
+body,
+button,
+input,
+select,
+table,
+textarea {
+    font-family: 'Helvetica Neue', helvetica, sans-serif;
+    font-size: 14px
+}
+label {
+    cursor: pointer
+}
+fieldset,
+img {
+    border: 0
+}
+menu,
+ol,
+ul {
+    list-style: none
+}
+address,
+em {
+    font-style: normal
+}
+a,
+a:link {
+    text-decoration: none;
+    background-color: transparent
+}
+a:active,
+a:focus,
+a:hover {
+    text-decoration: underline
+}
+textarea {
+    overflow: auto
+}
+button {
+    cursor: pointer
+}
+.no_outline {
+    outline: 0;
+}
+button,
+input,
+select,
+textarea {
+    .no_outline();
+}
+.blind,
+i {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden
+}
+button {
+    background: 0 0
+}
+.el_cover {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 100%;
+    display: inline-block
+}
+.dimmed {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .4);
+    z-index: 30
+}
+.btn_gray {
+    border: 1px solid #dfdfdf;
+    background-color: #f9f9f9;
+    color: #666;
+    font-size: 13px
+}
+.btn_green {
+    border: 1px solid #00b637;
+    background-color: #00c73c;
+    color: #fff;
+    font-size: 13px
+}
+.hidden_select {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    bottom: 0;
+    opacity: 0;
+    z-index: 1;
+    -webkit-appearance: none
+}
+@-webkit-keyframes sk-bouncedelay {
+    0%, 100%, 80% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 0
+    }
+    40% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1
+    }
+}
+@keyframes sk-bouncedelay {
+    0%, 100%, 80% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 0
+    }
+    40% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1
+    }
+}
+body,
+html {
+    height: 100%
+}
+.header {
+    background-color: #00c73c;
+    position: relative;
+    z-index: 10
+}
+.container {
+    width: 100%
+}
+.cover_list,
+.cover_read,
+.cover_setting,
+.cover_write,
+.ct_area,
+.mail_box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    transition: transform .3s ease-out
+}
+.cover_read,
+.cover_setting,
+.cover_write {
+    z-index: 20
+}
+.mail_box {
+    bottom: 0;
+    right: 0;
+    background-color: transparent
+}
+.scroll_hidden_body .container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    overflow: hidden
+}
+.header .btn_mailbox {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    padding: 0;
+    font-size: 0
+}
+.header .btn_mailbox:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -365px -91px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 21px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: top
+}
+.header .btn_search_open {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    padding: 0;
+    font-size: 0
+}
+.header .btn_search_open:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -458px -91px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: top
+}
+.header .btn_close {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    padding: 0;
+    font-size: 0
+}
+.header .btn_close:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -84px -173px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 17px;
+    display: inline-block;
+    vertical-align: top
+}
+.header .btn_prev {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    padding: 0;
+    font-size: 0
+}
+.header .btn_prev:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -341px -91px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 21px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: top
+}
+.header .btn_draft {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    padding: 0;
+    font-size: 0
+}
+.header .btn_draft:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -448px -63px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 22px;
+    display: inline-block;
+    vertical-align: top
+}
+.header .btn_send {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    padding: 0;
+    font-size: 0
+}
+.header .btn_send:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -217px -91px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 23px;
+    height: 21px;
+    display: inline-block;
+    vertical-align: top
+}
+.header .btn_save {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    padding: 0;
+    font-size: 0
+}
+.header .btn_save:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -246px -150px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 21px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: top
+}
+.header .btn_forward {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    padding: 0;
+    font-size: 0
+}
+.header .btn_forward:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -476px -63px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 26px;
+    height: 21px;
+    display: inline-block;
+    vertical-align: top
+}
+.header .btn_reply {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    padding: 0;
+    font-size: 0
+}
+.header .btn_reply:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -189px -91px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 21px;
+    display: inline-block;
+    vertical-align: top
+}
+.header .btn_reply_option {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    padding: 0;
+    font-size: 0
+}
+.header .btn_reply_option:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -417px -4px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 22px;
+    height: 19px;
+    display: inline-block;
+    vertical-align: top
+}
+.header .btn_edit_mail {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    padding: 0;
+    font-size: 0
+}
+.header .btn_edit_mail:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -442px -4px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 19px;
+    display: inline-block;
+    vertical-align: top
+}
+.header .btn_move_mail {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    padding: 0;
+    font-size: 0
+}
+.header .btn_move_mail:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -270px -150px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: top
+}
+.header .btn_delete {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    padding: 0;
+    font-size: 0;
+    margin: -2px -3px 0 0
+}
+.header .btn_delete:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -113px -150px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 19px;
+    height: 19px;
+    display: inline-block;
+    vertical-align: top
+}
+.header .btn_empty_trash {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    padding: 0;
+    font-size: 0;
+    margin: -2px -3px 0 0
+}
+.header .btn_empty_trash:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -243px -91px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 22px;
+    height: 21px;
+    display: inline-block;
+    vertical-align: top
+}
+.header .btn_more {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    padding: 0;
+    font-size: 0
+}
+.header .btn_more:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: 0 -194px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 7px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: top
+}
+.header .btn_read {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    padding: 0;
+    font-size: 0
+}
+.header .btn_read:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -491px -38px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 19px;
+    display: inline-block;
+    vertical-align: top
+}
+.header .btn_unread {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    padding: 0;
+    font-size: 0
+}
+.header .btn_unread:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -201px -150px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 19px;
+    height: 19px;
+    display: inline-block;
+    vertical-align: top
+}
+header.header .btn_mailbox {
+    position: absolute;
+    right: 10px;
+    top: 9px;
+    padding: 5px;
+    z-index: 10
+}
+header.header .btn_search_open {
+    position: absolute;
+    top: 9px;
+    right: 54px;
+    padding: 5px
+}
+header.header .btn_write {
+    position: absolute;
+    top: 7px;
+    right: 9px;
+    padding: 5px
+}
+header.header .btn_edit_mail,
+header.header .btn_move_mail {
+    padding: 8px;
+    vertical-align: top
+}
+header.header .btn_edit_mail {
+    padding-top: 7px
+}
+header.header .btn_reply_option {
+    padding-top: 6px
+}
+header.header .btn_empty_trash {
+    padding: 7px 6px 8px 8px
+}
+header.header .btn_move_mail {
+    display: inline-block;
+    line-height: 0;
+    position: relative;
+    padding-left: 11px
+}
+header.header .btn_has_layer {
+    display: inline-block;
+    position: relative;
+    vertical-align: top
+}
+header.header .btn_has_layer .ly_context {
+    max-width: none;
+    top: 37px;
+    right: -3px
+}
+.gnb {
+    position: relative;
+    padding: 0;
+    box-sizing: border-box;
+    height: 48px
+}
+.gnb .logos {
+    font-size: 0
+}
+.gnb .logo_mail,
+.gnb .logo_naver {
+    display: inline-block;
+    vertical-align: top;
+    -webkit-transition: transform .3s cubic-bezier(0.645, .045, .355, 1);
+    transition: transform .3s cubic-bezier(0.645, .045, .355, 1)
+}
+.gnb .logo_mail a,
+.gnb .logo_naver a {
+    display: inline-block;
+    vertical-align: top
+}
+.gnb .logo_mail a:before,
+.gnb .logo_naver a:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -21px -173px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: top
+}
+.gnb .logo_mail a {
+    padding: 14px 10px 15px
+}
+.gnb .logo_mail a:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -379px -4px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 19px;
+    display: inline-block;
+    vertical-align: top
+}
+.gnb .logo_naver a {
+    padding: 15px;
+    background-color: #00b336
+}
+.hd_addressbook,
+.hd_box,
+.hd_list_receipt,
+.hd_read,
+.hd_write {
+    height: 48px;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap
+}
+.hd_addressbook:before,
+.hd_box:before,
+.hd_list_receipt:before,
+.hd_read:before,
+.hd_write:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle
+}
+.hd_addressbook .hd_tit,
+.hd_box .hd_tit,
+.hd_list_receipt .hd_tit,
+.hd_read .hd_tit,
+.hd_write .hd_tit {
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    vertical-align: middle;
+    font-weight: 400
+}
+.hd_addressbook .btn_close,
+.hd_addressbook .btn_prev,
+.hd_box .btn_close,
+.hd_box .btn_prev,
+.hd_list_receipt .btn_close,
+.hd_list_receipt .btn_prev,
+.hd_read .btn_close,
+.hd_read .btn_prev,
+.hd_write .btn_close,
+.hd_write .btn_prev {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    padding: 8px
+}
+.hd_addressbook .btn_close,
+.hd_box .btn_close,
+.hd_list_receipt .btn_close,
+.hd_read .btn_close,
+.hd_write .btn_close {
+    top: 7px
+}
+.hd_addressbook .btn_delete,
+.hd_addressbook .btn_forward,
+.hd_addressbook .btn_more,
+.hd_addressbook .btn_read,
+.hd_addressbook .btn_reply,
+.hd_addressbook .btn_reply_option,
+.hd_addressbook .btn_unread,
+.hd_box .btn_delete,
+.hd_box .btn_forward,
+.hd_box .btn_more,
+.hd_box .btn_read,
+.hd_box .btn_reply,
+.hd_box .btn_reply_option,
+.hd_box .btn_unread,
+.hd_list_receipt .btn_delete,
+.hd_list_receipt .btn_forward,
+.hd_list_receipt .btn_more,
+.hd_list_receipt .btn_read,
+.hd_list_receipt .btn_reply,
+.hd_list_receipt .btn_reply_option,
+.hd_list_receipt .btn_unread,
+.hd_read .btn_delete,
+.hd_read .btn_forward,
+.hd_read .btn_more,
+.hd_read .btn_read,
+.hd_read .btn_reply,
+.hd_read .btn_reply_option,
+.hd_read .btn_unread,
+.hd_write .btn_delete,
+.hd_write .btn_forward,
+.hd_write .btn_more,
+.hd_write .btn_read,
+.hd_write .btn_reply,
+.hd_write .btn_reply_option,
+.hd_write .btn_unread {
+    padding: 8px 11px;
+    vertical-align: top
+}
+.hd_addressbook .btn_reply,
+.hd_box .btn_reply,
+.hd_list_receipt .btn_reply,
+.hd_read .btn_reply,
+.hd_write .btn_reply {
+    padding-top: 7px;
+    padding-right: 10px
+}
+.hd_addressbook .btn_forward,
+.hd_box .btn_forward,
+.hd_list_receipt .btn_forward,
+.hd_read .btn_forward,
+.hd_write .btn_forward {
+    padding-top: 7px;
+    padding-right: 5px
+}
+.hd_addressbook .btn_more,
+.hd_box .btn_more,
+.hd_list_receipt .btn_more,
+.hd_read .btn_more,
+.hd_write .btn_more {
+    padding: 7px 15px 8px 17px
+}
+.hd_addressbook .btn_read,
+.hd_addressbook .btn_unread,
+.hd_box .btn_read,
+.hd_box .btn_unread,
+.hd_list_receipt .btn_read,
+.hd_list_receipt .btn_unread,
+.hd_read .btn_read,
+.hd_read .btn_unread,
+.hd_write .btn_read,
+.hd_write .btn_unread {
+    padding-left: 12px;
+    padding-right: 13px
+}
+.hd_addressbook .btn_read,
+.hd_box .btn_read,
+.hd_list_receipt .btn_read,
+.hd_read .btn_read,
+.hd_write .btn_read {
+    padding-top: 6px;
+    padding-bottom: 10px;
+    padding-left: 13px
+}
+.hd_addressbook .option,
+.hd_box .option,
+.hd_list_receipt .option,
+.hd_read .option,
+.hd_write .option {
+    position: absolute;
+    top: 8px;
+    right: 6px;
+    z-index: 10;
+    line-height: 0;
+    font-size: 0
+}
+.hd_addressbook .btn_save,
+.hd_box .btn_save,
+.hd_list_receipt .btn_save,
+.hd_read .btn_save,
+.hd_write .btn_save {
+    padding: 8px;
+    vertical-align: top
+}
+.hd_write .btn_send {
+    padding: 5px 7px 8px 8px;
+    vertical-align: top
+}
+.hd_write .btn_draft {
+    position: absolute;
+    top: 5px;
+    left: 38px;
+    padding: 8px 4px
+}
+.hd_box .hd_tit {
+    vertical-align: top;
+    line-height: 48px
+}
+.search_cover {
+    display: none;
+    position: relative;
+    background-color: #fff;
+    height: 48px;
+    box-sizing: border-box;
+    border: 6px solid #00c73c;
+    border-top: 0;
+    padding-right: 60px
+}
+.search_cover .btn_search_close {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    font-size: 0;
+    position: absolute;
+    left: -34px;
+    top: 5px;
+    padding: 5px
+}
+.search_cover .btn_search_close:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -84px -173px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 17px;
+    display: inline-block;
+    vertical-align: top
+}
+.search_cover .search_field {
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box
+}
+.search_cover .search_field input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    font-size: 17px;
+    color: #333;
+    line-height: normal;
+    padding: 3px 0 2px 10px
+}
+.search_cover .search_field input::-webkit-input-placeholder {
+    font-size: 17px;
+    vertical-align: middle;
+    color: #bbb
+}
+.search_cover .btn_reset {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    font-size: 0;
+    position: absolute;
+    right: 35px;
+    top: 0;
+    padding: 0 4px;
+    height: 100%;
+    white-space: nowrap
+}
+.search_cover .btn_reset:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -105px -173px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    vertical-align: middle
+}
+.search_cover .btn_reset:after {
+    content: '';
+    width: 0;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle
+}
+.search_cover .btn_submit {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    font-size: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 0 9px;
+    white-space: nowrap
+}
+.search_cover .btn_submit:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -135px -150px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 19px;
+    height: 19px;
+    display: inline-block;
+    vertical-align: middle
+}
+.search_cover .btn_submit:after {
+    content: '';
+    width: 0;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle
+}
+.search_cover .btn_prev {
+    display: none
+}
+.gnb.search_open {
+    height: auto
+}
+.gnb.search_open .logo_naver {
+    -webkit-transform: scale(0.75);
+    transform: scale(0.75)
+}
+.gnb.search_open .logo_mail {
+    -webkit-transform: translateX(-6px);
+    transform: translateX(-6px)
+}
+.gnb.search_open .btn_search_open:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -435px -91px;
+    background-size: 509px 232px
+}
+.gnb.search_open .ly_search_recent,
+.gnb.search_open .search_cover {
+    display: block
+}
+.gnb .search_mailbox {
+    display: none
+}
+.cover_list_search .gnb {
+    padding: 6px 48px 0 44px;
+    height: 54px
+}
+.cover_list_search .gnb .btn_mailbox,
+.cover_list_search .gnb .btn_search_open,
+.cover_list_search .gnb .btn_write,
+.cover_list_search .gnb .logos {
+    display: none
+}
+.cover_list_search .gnb .search_cover {
+    display: block;
+    border-right: 0
+}
+.cover_list_search .search_cover .btn_search_close {
+    display: none
+}
+.cover_list_search .search_cover .btn_prev {
+    display: block;
+    position: absolute;
+    left: -40px;
+    top: 6px;
+    padding: 5px
+}
+.cover_list_search .search_mailbox {
+    display: block;
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    width: 42px;
+    height: 42px;
+    text-align: center;
+    background-color: #00b336;
+    font-size: 0;
+    white-space: nowrap
+}
+.cover_list_search .search_mailbox:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -293px -91px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 21px;
+    height: 21px;
+    display: inline-block;
+    vertical-align: middle
+}
+.cover_list_search .search_mailbox:after {
+    content: '';
+    width: 0;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle
+}
+.cover_list_search .list_head .box_name .cnt {
+    color: #282828
+}
+.cover_list_search .list_head .box_name .cnt:before {
+    content: '(';
+    background-color: transparent;
+    width: auto;
+    height: auto;
+    margin-right: 0;
+    border-radius: 0
+}
+.cover_list_search .list_head .box_name .cnt:after {
+    content: ')'
+}
+.ly_search_recent {
+    position: absolute;
+    z-index: 30;
+    top: 96px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    display: none
+}
+.ly_search_recent li {
+    position: relative;
+    border-bottom: 1px solid #ededed
+}
+.ly_search_recent li a {
+    display: block;
+    line-height: 18px;
+    height: 18px;
+    padding: 10px 44px 10px 17px;
+    color: #999;
+    text-decoration: none!important;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 100%
+}
+.ly_search_recent li a .search_keyword {
+    color: #222
+}
+.ly_search_recent .btn_remove_history {
+    position: absolute;
+    right: 6px;
+    top: 0;
+    border: 0;
+    padding: 13px;
+    line-height: 0
+}
+.ly_search_recent .btn_remove_history:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -370px -173px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    vertical-align: top
+}
+.cover_list_search .ly_search_recent {
+    top: 54px
+}
+.mail_box .sorting .sort_attach,
+.mail_box .sorting .sort_imp,
+.mail_box .sorting .sort_tome,
+.mail_box .sorting .sort_unread {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    padding: 32px 0 0;
+    width: 50px;
+    position: relative;
+    font-size: 12px;
+    color: #fff;
+    white-space: nowrap
+}
+.mail_box .sorting .sort_attach:before,
+.mail_box .sorting .sort_imp:before,
+.mail_box .sorting .sort_tome:before,
+.mail_box .sorting .sort_unread:before {
+    content: '';
+    position: absolute
+}
+.mail_box .cover_mailbox {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 275px;
+    background-color: #e9ecef;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    z-index: 40
+}
+.mail_box .profile {
+    box-sizing: border-box;
+    padding: 15px 35px 0 64px;
+    position: relative;
+    line-height: 1.2em;
+    height: 61px;
+    border-bottom: 1px solid #00b336
+}
+.mail_box .profile .user_image {
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    overflow: hidden
+}
+.mail_box .profile .user_image img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    border-radius: 40px
+}
+.mail_box .profile .user_name {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 100%;
+    display: block;
+    color: #fff;
+    font-weight: 400;
+    font-size: 15px
+}
+.mail_box .profile .user_email {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 100%;
+    display: block;
+    color: rgba(255, 255, 255, .5);
+    font-size: 12px
+}
+.mail_box .profile .btn_close {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    font-size: 0;
+    position: absolute;
+    right: 5px;
+    top: 12px;
+    padding: 10px
+}
+.mail_box .profile .btn_close:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -220px -173px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: top
+}
+.mail_box .sorting {
+    box-sizing: border-box;
+    height: 71px;
+    background-color: #00c73c;
+    padding: 13px 22px 12px;
+    font-size: 0;
+    text-align: justify
+}
+.mail_box .sorting:after {
+    content: '';
+    display: inline-block;
+    height: 0;
+    width: 99%
+}
+.mail_box .sorting .sort_unread:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -315px -38px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 27px;
+    height: 22px;
+    display: inline-block;
+    vertical-align: top;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto
+}
+.mail_box .sorting .sort_imp:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -285px -38px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 27px;
+    height: 22px;
+    display: inline-block;
+    vertical-align: top;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto
+}
+.mail_box .sorting .sort_attach:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -345px -38px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 27px;
+    height: 22px;
+    display: inline-block;
+    vertical-align: top;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto
+}
+.mail_box .sorting .sort_tome:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -255px -38px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 27px;
+    height: 22px;
+    display: inline-block;
+    vertical-align: top;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto
+}
+.mail_box .sorting .cnt {
+    position: absolute;
+    top: -2px;
+    left: 50%;
+    height: 15px;
+    line-height: 16px;
+    border-radius: 15px;
+    background-color: #fff;
+    padding: 0 5px;
+    font-size: 10px;
+    color: #01c73c
+}
+.mail_box .list_default {
+    position: relative;
+    background-color: #fff;
+    margin-top: 5px
+}
+.mail_box .list_default.list_box_mine,
+.mail_box .list_default.list_box_system {
+    margin-top: 0;
+    border-top: 1px solid #f2f2f2
+}
+.mail_box .list_default li {
+    position: relative;
+    line-height: 20px;
+    border-top: 1px solid #f2f2f2
+}
+.mail_box .list_default li:after {
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+.mail_box .list_default li:first-child {
+    border-top: 0
+}
+.mail_box .list_default li a {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: top;
+    color: #111;
+    white-space: nowrap;
+    overflow: hidden;
+    text-decoration: none!important;
+    padding: 13px 10px 12px 15px;
+    font-size: 14px
+}
+.mail_box .list_default li a:after {
+    content: '';
+    -webkit-box-flex: 100;
+    -moz-box-flex: 0 1 auto;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    box-sizing: border-box;
+    display: block
+}
+.mail_box .list_default li a.selected {
+    color: #01c73c
+}
+.mail_box .list_default li .cnt {
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    color: #00c73c;
+    font-size: 16px;
+    padding: 5px 0 5px 5px;
+    vertical-align: top;
+    line-height: 10px
+}
+.mail_box .list_default li .cnt:empty {
+    display: none
+}
+.mail_box .list_default li .el_cover {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 100%;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 0 1 auto;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    box-sizing: border-box;
+    display: block;
+    vertical-align: top
+}
+.mail_box .list_default li .btn_mbox_sys {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 0 7px;
+    box-sizing: border-box;
+    color: #a5a5a5;
+    font-size: 11px;
+    float: right;
+    height: 25px;
+    line-height: 24px;
+    margin-left: 10px;
+    min-width: 54px;
+    position: relative;
+    top: 10px;
+    margin-right: 15px
+}
+.mail_box .list_default li.box_mine_sub,
+.mail_box .list_default li.mbox_got,
+.mail_box .list_default li.memo_folder_sub {
+    border-top: 0
+}
+.mail_box .list_default li.box_mine_sub a,
+.mail_box .list_default li.mbox_got a,
+.mail_box .list_default li.memo_folder_sub a {
+    padding-top: 6px;
+    padding-bottom: 7px
+}
+.mail_box .list_default li.box_mine_sub a:before,
+.mail_box .list_default li.mbox_got a:before,
+.mail_box .list_default li.memo_folder_sub a:before {
+    content: '';
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -46px -150px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 3px
+}
+.mail_box .list_default li.box_mine_sub a.selected:before,
+.mail_box .list_default li.mbox_got a.selected:before,
+.mail_box .list_default li.memo_folder_sub a.selected:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -23px -150px;
+    background-size: 509px 232px
+}
+.mail_box .list_default .has_sidebutton {
+    padding-right: 64px
+}
+.mail_box .list_default .mbox_got+.memo_folder {
+    margin-top: 15px
+}
+.mail_box .list_default .depth_2 {
+    padding-left: 7px
+}
+.mail_box .list_default .depth_3 {
+    padding-left: 14px
+}
+.mail_box .list_default .depth_4 {
+    padding-left: 21px
+}
+.mail_box .list_default .depth_5 {
+    padding-left: 28px
+}
+.mail_box .list_default .depth_6 {
+    padding-left: 35px
+}
+.mail_box .mbox_all a:before {
+    content: '';
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    background-color: #00c73c;
+    margin-right: 10px;
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -50px -125px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: top
+}
+.mail_box .mbox_inbox a:before {
+    content: '';
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    background-color: #00c73c;
+    margin-right: 10px;
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -487px -125px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: top
+}
+.mail_box .memo_folder a:before {
+    content: '';
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    background-color: #00c73c;
+    margin-right: 10px;
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -418px -125px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: top
+}
+.mail_box .mbox_send a:before {
+    content: '';
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    background-color: #00c73c;
+    margin-right: 10px;
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -211px -125px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: top
+}
+.mail_box .mbox_inven a:before {
+    content: '';
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    background-color: #00c73c;
+    margin-right: 10px;
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -464px -125px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: top
+}
+.mail_box .mbox_bill a:before {
+    content: '';
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    background-color: #00c73c;
+    margin-right: 10px;
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -112px -91px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: top
+}
+.mail_box .mbox_shopping a:before {
+    content: '';
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    background-color: #00c73c;
+    margin-right: 10px;
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -142px -125px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: top
+}
+.mail_box .mbox_sns a:before {
+    content: '';
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    background-color: #00c73c;
+    margin-right: 10px;
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -112px -68px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: top
+}
+.mail_box .mbox_cafe a:before {
+    content: '';
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    background-color: #00c73c;
+    margin-right: 10px;
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -412px -91px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: top
+}
+.mail_box .list_box_mine .box_title:before {
+    content: '';
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    background-color: #00c73c;
+    margin-right: 10px;
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -349px -125px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: top
+}
+.mail_box .mbox_spam a:before {
+    content: '';
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    background-color: #999;
+    margin-right: 10px;
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -481px -91px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: top
+}
+.mail_box .mbox_trash a:before {
+    content: '';
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    background-color: #999;
+    margin-right: 10px;
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -303px -125px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: top
+}
+.mail_box .mbox_setup a:before {
+    content: '';
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    background-color: #999;
+    margin-right: 10px;
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -188px -125px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: top
+}
+.mail_box .mbox_logout a:before {
+    content: '';
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    background-color: #999;
+    margin-right: 10px;
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -441px -125px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: top
+}
+.mail_box .mbox_desktop a:before {
+    content: '';
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    background-color: #999;
+    margin-right: 10px;
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: 0 -150px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: top
+}
+.mail_box .mbox_cs a:before {
+    content: '';
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    background-color: #999;
+    margin-right: 10px;
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -389px -91px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: top
+}
+.mail_box .mbox_report a:before {
+    content: '';
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    background-color: #999;
+    margin-right: 10px;
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -326px -125px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: top
+}
+.mail_box .memo_folder .mailbox_list {
+    display: none;
+    padding-top: 3px
+}
+.mail_box .fold_memo_folder .memo_folder_sub {
+    display: none
+}
+.mail_box .fold_memo_folder .title_cover .toggle_list:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -161px -110px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 8px;
+    display: inline-block;
+    vertical-align: top
+}
+.mail_box .title_cover:after {
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+.mail_box .title_cover .box_title {
+    font-weight: 400;
+    font-size: 14px;
+    color: #111;
+    float: left
+}
+.mail_box .title_cover .box_title a {
+    padding-right: 0
+}
+.mail_box .title_cover .toggle_list {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    font-size: 0;
+    vertical-align: top;
+    padding: 19px 5px 18px;
+    overflow: hidden
+}
+.mail_box .title_cover .toggle_list:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -410px -150px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 8px;
+    display: inline-block;
+    vertical-align: top
+}
+.mail_box .title_cover button.btn_mbox_sys {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    float: none
+}
+.mail_box .list_box_mine .mailbox_list li:last-child {
+    padding-bottom: 15px
+}
+.mail_box .list_box_mine .box_title {
+    line-height: 20px;
+    padding: 13px 0 12px 15px
+}
+.mail_box .list_box_mine .toggle_list {
+    position: absolute;
+    top: 0;
+    right: 10px
+}
+.mail_box .fold_list_box_mine .box_mine_sub {
+    display: none
+}
+.mail_box .fold_list_box_mine .title_cover .toggle_list:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -161px -110px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 8px;
+    display: inline-block;
+    vertical-align: top
+}
+.mail_box .list_default li.mbox_logout .el_cover {
+    padding-right: 20px;
+    text-overflow: clip;
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    display: block
+}
+.mail_box .list_default li.mbox_logout .user_name {
+    color: #00c73c;
+    text-align: right;
+    padding-right: 5px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 100%;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1 1 auto;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    box-sizing: border-box;
+    display: block
+}
+.mail_box .list_default li.mbox_logout a:after {
+    display: none
+}
+.mail_box .indicator {
+    padding: 12px 0 10px 15px;
+    font-size: 10px;
+    color: #444;
+    position: relative
+}
+.mail_box .indicator .copyright {
+    font-size: 11px;
+    color: #999
+}
+.mail_box .indicator .storage {
+    position: absolute;
+    right: 15px;
+    top: 13px;
+    font-size: 10px;
+    color: #777
+}
+.mail_box .indicator .used {
+    color: #00c73c;
+    margin-left: 3px;
+    font-size: 11px
+}
+.mail_box .indicator .total {
+    color: #777;
+    font-size: 11px
+}
+.mail_box .indicator .slash {
+    color: #777;
+    font-size: 11px;
+    padding: 0
+}
+.mail_box .pnb {
+    margin-top: 5px;
+    text-align: center;
+    padding: 12px 0 0;
+    background-color: #fff;
+    font-size: 0;
+    height: 60px;
+    box-sizing: border-box
+}
+.mail_box .pnb i {
+    font-size: 12px;
+    color: #333;
+    width: auto;
+    height: auto;
+    margin: 0;
+    clip: auto;
+    position: static;
+    font-style: normal;
+    display: block;
+    padding-top: 4px
+}
+.mail_box .pnb .svc_calendar {
+    width: 60px;
+    display: inline-block;
+    text-decoration: none!important
+}
+.mail_box .pnb .svc_calendar:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -119px -125px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: top
+}
+.mail_box .pnb .svc_contact {
+    width: 60px;
+    display: inline-block;
+    text-decoration: none!important
+}
+.mail_box .pnb .svc_contact:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -280px -125px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: top
+}
+.mail_box .pnb .svc_ndrive {
+    width: 60px;
+    display: inline-block;
+    text-decoration: none!important
+}
+.mail_box .pnb .svc_ndrive:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -234px -125px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: top
+}
+.mail_box .pnb .svc_memo {
+    width: 60px;
+    display: inline-block;
+    text-decoration: none!important
+}
+.mail_box .pnb .svc_memo:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -257px -125px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: top
+}
+.list_head {
+    position: relative;
+    z-index: 20;
+    border-bottom: 1px solid #d3d6d6;
+    height: 46px;
+    line-height: 46px;
+    padding-left: 42px;
+    background-color: #fff;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex
+}
+.list_head .cmp_checkbox {
+    position: absolute;
+    left: 0;
+    top: 1px
+}
+.list_head .cmp_checkbox input {
+    position: relative;
+    top: -1px
+}
+.list_head .box_name {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 100%;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-size: 17px;
+    color: #282828;
+    line-height: 48px;
+    -webkit-flex: 1 1 auto;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex
+}
+.list_head .box_name .el_cover {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 100%;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 0 1 auto;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    box-sizing: border-box;
+    display: block
+}
+.list_head .box_name .cnt {
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    display: block;
+    font-size: 17px;
+    color: #00c73c;
+    padding-left: 5px;
+    position: relative
+}
+.list_head .box_name .cnt:before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background-color: #00c73c;
+    border-radius: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    position: relative;
+    top: -2px
+}
+.list_head .box_name .btn_refresh {
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    display: block;
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    font-size: 0;
+    padding: 0 5px
+}
+.list_head .box_name .btn_refresh:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -125px -173px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 17px;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    top: 2px
+}
+.list_head .box_name:after {
+    content: '';
+    -webkit-box-flex: 100;
+    -moz-box-flex: 0 1 auto;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    box-sizing: border-box;
+    display: block
+}
+.list_head .action {
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    display: block;
+    flex-grow: 1;
+    padding: 9px 14px 9px 5px;
+    font-size: 0;
+    text-align: right
+}
+.list_head .action button {
+    vertical-align: top
+}
+.btn_write {
+    position: fixed;
+    bottom: 13px;
+    right: 13px;
+    z-index: 40;
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    padding: 0;
+    font-size: 0
+}
+.btn_write:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -57px -68px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 52px;
+    height: 52px;
+    display: inline-block;
+    vertical-align: top
+}
+.btn_edit {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    padding: 0;
+    font-size: 0;
+    font-size: 16px;
+    color: #282828;
+    height: 28px;
+    line-height: 29px
+}
+.btn_edit:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -325px -4px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 28px;
+    display: inline-block;
+    vertical-align: top
+}
+.btn_edit.disabled,
+.btn_edit[disabled] {
+    color: #a9a9a9
+}
+.btn_edit.disabled:before,
+.btn_edit[disabled]:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -352px -4px;
+    background-size: 509px 232px
+}
+.cmp_checkbox {
+    display: inline-block;
+    padding: 15px;
+    box-sizing: border-box;
+    line-height: 0
+}
+.cmp_checkbox input[type=checkbox] {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    padding: 0;
+    font-size: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    vertical-align: top
+}
+.cmp_checkbox i {
+    position: static;
+    color: transparent;
+    margin: 0;
+    clip: auto;
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -238px -173px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    vertical-align: top
+}
+.cmp_checkbox input:checked+i {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -274px -173px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    vertical-align: top
+}
+.edit_task {
+    display: none;
+    height: 95px;
+    background-color: #262d37;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 30;
+    text-align: center
+}
+.list_edit_mode {
+    padding-top: 95px
+}
+.list_edit_mode .header,
+.list_edit_mode .list_head {
+    display: none
+}
+.list_edit_mode .edit_task {
+    display: block
+}
+.edit_task .target_cnt,
+.edit_task .target_unseleted {
+    text-align: center;
+    font-size: 16px;
+    padding-top: 11px;
+    color: #fff;
+    height: 45px;
+    box-sizing: border-box
+}
+.edit_task .target_cnt {
+    font-size: 17px
+}
+.edit_task .target_cnt .cnt {
+    color: #00c73c
+}
+.edit_task .target_cnt .slash {
+    padding: 0 5px
+}
+.edit_task .target_unseleted,
+.edit_task.unselected .target_cnt {
+    display: none
+}
+.edit_task.unselected .target_unseleted {
+    display: block
+}
+.edit_task.unselected .btn_read:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -462px -38px;
+    background-size: 509px 232px
+}
+.edit_task.unselected .btn_delete:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -332px -63px;
+    background-size: 509px 232px
+}
+.edit_task.unselected .btn_unread:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -404px -38px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 26px;
+    height: 22px;
+    display: inline-block;
+    vertical-align: top
+}
+.edit_task.unselected .btn_force_delete:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -375px -38px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 26px;
+    height: 22px;
+    display: inline-block;
+    vertical-align: top
+}
+.edit_task.unselected .btn_move:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -274px -63px;
+    background-size: 509px 232px
+}
+.edit_task.unselected .btn_spam:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -189px -38px;
+    background-size: 509px 232px
+}
+.edit_task.unselected .btn_label {
+    color: rgba(255, 255, 255, .2)
+}
+.edit_task.unselected .btn_select .btn_label {
+    color: rgba(255, 255, 255, .6)
+}
+.edit_task .btn_move,
+.edit_task button {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    padding: 0;
+    font-size: 0;
+    vertical-align: top;
+    position: relative;
+    width: 52px;
+    text-align: center
+}
+.edit_task .btn_move:before,
+.edit_task button:before {
+    content: ''
+}
+.edit_task .btn_label {
+    display: block;
+    font-size: 12px;
+    color: rgba(255, 255, 255, .6);
+    padding-top: 1px
+}
+.edit_task .btn_select {
+    width: 55px
+}
+.edit_task .btn_select:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -433px -38px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 26px;
+    height: 22px;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    left: 4px
+}
+.edit_task .btn_read {
+    width: 51px
+}
+.edit_task .btn_read:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -245px -63px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 26px;
+    height: 22px;
+    display: inline-block;
+    vertical-align: top
+}
+.edit_task .btn_unread {
+    width: 51px
+}
+.edit_task .btn_unread:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -419px -63px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 26px;
+    height: 22px;
+    display: inline-block;
+    vertical-align: top
+}
+.edit_task .btn_delete:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -303px -63px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 26px;
+    height: 22px;
+    display: inline-block;
+    vertical-align: top
+}
+.edit_task .btn_force_delete:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -361px -63px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 26px;
+    height: 22px;
+    display: inline-block;
+    vertical-align: top
+}
+.edit_task .btn_move {
+    width: 53px;
+    display: inline-block;
+    overflow: hidden
+}
+.edit_task .btn_move:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -390px -63px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 26px;
+    height: 22px;
+    display: inline-block;
+    vertical-align: top
+}
+.edit_task .btn_spam {
+    width: 51px
+}
+.edit_task .btn_spam:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -222px -38px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 22px;
+    display: inline-block;
+    vertical-align: top
+}
+.edit_task .btn_close {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px;
+    width: auto
+}
+.edit_task .btn_close:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -256px -173px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    vertical-align: top
+}
+.edit_task .comp_selectbox select {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0
+}
+.cover_list .list_item .ico_cal,
+.cover_list .list_item .ico_foward,
+.cover_list .list_item .ico_reply {
+    float: left;
+    padding-right: 4px;
+    vertical-align: top;
+    font-size: 0;
+    line-height: 0
+}
+.cover_list .list_item .ico_cal:before,
+.cover_list .list_item .ico_foward:before,
+.cover_list .list_item .ico_reply:before {
+    content: ''
+}
+.cover_list {
+    z-index: 10;
+    bottom: 0;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch
+}
+.cover_list .mail_list {
+    position: relative;
+    z-index: 10
+}
+.cover_list .mail_list li {
+    position: relative;
+    overflow: hidden
+}
+.cover_list .mail_list li.empty {
+    text-align: center;
+    padding: 4em 0;
+    color: #333;
+    font-size: 16px
+}
+.cover_list .mail_list li.empty:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -136px 0;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 41px;
+    vertical-align: top;
+    display: block;
+    margin: 0 auto 23px
+}
+.cover_list .mail_list b,
+.cover_list .mail_list strong {
+    color: #5899ff;
+    font-weight: inherit
+}
+.cover_list .mail_list.mail_list_preview .list_item .content {
+    display: block;
+    display: -webkit-box
+}
+.cover_list .mail_list.mail_list_preview .list_item .subject {
+    margin-bottom: 4px
+}
+.cover_list .mail_list.mail_list_preview .attach_file {
+    display: block
+}
+.cover_list .mail_list.paging {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0)
+}
+.cover_list .list_item {
+    position: relative;
+    padding: 9px 15px 8px 42px;
+    background-color: #fff;
+    border-bottom: 1px solid #e9e9e9;
+    z-index: 20
+}
+.cover_list .list_item .meta {
+    display: block;
+    position: relative;
+    text-decoration: none!important
+}
+.cover_list .list_item .info_right {
+    float: right;
+    padding: 4px 23px 0 2px;
+    font-size: 0
+}
+.cover_list .list_item .info_left {
+    display: block;
+    overflow: hidden;
+    margin-bottom: 2px
+}
+.cover_list .list_item .username {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 100%;
+    display: block;
+    color: #999;
+    font-size: 16px;
+    font-weight: 700;
+    -webkit-font-smoothing: antialiased
+}
+.cover_list .list_item .date {
+    color: #888;
+    font-size: 11px;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 7px;
+    font-weight: 400
+}
+.cover_list .list_item .folder_name {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 11px;
+    color: #999;
+    max-width: 70px;
+    box-sizing: border-box
+}
+.cover_list .list_item .subject {
+    color: #999;
+    font-size: 15px;
+    padding-right: 15px;
+    position: relative;
+    font-weight: 400;
+    white-space: nowrap;
+    display: inline-block;
+    max-width: 100%;
+    box-sizing: border-box;
+    clear: both;
+    vertical-align: top;
+    overflow: hidden;
+    padding-bottom: 1px;
+    line-height: 1.26667em
+}
+.cover_list .list_item .subject .important {
+    font-size: 0;
+    color: transparent;
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 5px;
+    margin-right: 3px;
+    line-height: 0
+}
+.cover_list .list_item .subject .important:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -505px -63px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 2px;
+    height: 10px;
+    display: inline-block;
+    vertical-align: top
+}
+.cover_list .list_item .subject .el_cover {
+    vertical-align: top
+}
+.cover_list .list_item .ico_attach {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-top: 3px;
+    font-size: 0
+}
+.cover_list .list_item .ico_attach:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -355px -173px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    vertical-align: top
+}
+.cover_list .list_item .ico_reply {
+    padding-top: 2px
+}
+.cover_list .list_item .ico_reply:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -324px -173px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 13px;
+    height: 12px;
+    display: inline-block;
+    vertical-align: top
+}
+.cover_list .list_item .ico_foward {
+    padding-top: 3px
+}
+.cover_list .list_item .ico_foward:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -394px -150px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 13px;
+    height: 10px;
+    display: inline-block;
+    vertical-align: top
+}
+.cover_list .list_item .ico_cal {
+    font-size: 15px;
+    padding-top: 3px
+}
+.cover_list .list_item .ico_cal:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -339px -150px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 14px;
+    display: inline-block;
+    vertical-align: top;
+    vertical-align: middle;
+    position: relative;
+    top: 0
+}
+.cover_list .list_item .ico_sendmail {
+    float: left;
+    border: 1px solid #d9d9d9;
+    font-size: 9px;
+    color: #999;
+    height: 14px;
+    box-sizing: border-box;
+    line-height: 12px;
+    padding: 0 3px;
+    margin-right: 4px;
+    position: relative;
+    border-radius: 1px;
+    top: 1px
+}
+.cover_list .list_item .content {
+    color: #999;
+    font-size: 15px;
+    line-height: 1.39;
+    padding-right: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    display: none
+}
+.cover_list .list_item .cmp_checkbox {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -23px
+}
+.cover_list .list_item .cmp_checkbox input {
+    vertical-align: top
+}
+.cover_list .list_item .btn_imp {
+    position: absolute;
+    right: 8px;
+    top: 4px
+}
+.cover_list .unread .list_item .meta:before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    background-color: #00c73c;
+    border-radius: 20px;
+    left: -9px;
+    top: 7px
+}
+.cover_list .unread .list_item .subject,
+.cover_list .unread .list_item .username {
+    color: #111
+}
+.cover_list .unread .list_item .content {
+    color: #666
+}
+.cover_list .under {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid #e9e9e9;
+    z-index: 10
+}
+.cover_list .under .btn_delete,
+.cover_list .under .btn_read {
+    border-radius: 0;
+    border: 0;
+    padding: 0;
+    font-size: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 58px
+}
+.cover_list .under .btn_delete {
+    right: 0;
+    background-color: #fc674e
+}
+.cover_list .under .btn_delete:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -73px -125px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: top
+}
+.cover_list .under .btn_read {
+    left: 0;
+    background-color: #bec0c3
+}
+.cover_list .under .btn_read:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -165px -125px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: top
+}
+.cover_list .read .under .btn_read {
+    background-color: #4adf77
+}
+.cover_list .read .under .btn_read:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -96px -125px;
+    background-size: 509px 232px
+}
+.cover_list.fix_head .list_head {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0
+}
+.cover_list.fix_head .header {
+    padding-top: 47px
+}
+.btn_imp {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    font-size: 0;
+    padding: 6px
+}
+.btn_imp:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -465px -4px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 19px;
+    height: 19px;
+    display: inline-block;
+    vertical-align: top
+}
+.btn_imp.active:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -487px -4px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 19px;
+    height: 19px;
+    display: inline-block;
+    vertical-align: top
+}
+.search_option {
+    border-bottom: 1px solid #e9e9e9;
+    background-color: #fff;
+    text-align: justify;
+    font-size: 0
+}
+.search_option button {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    font-size: 0;
+    font-size: 14px;
+    color: #333;
+    height: 39px;
+    line-height: 39px;
+    padding: 0 15px;
+    position: relative
+}
+.search_option button.selected {
+    color: #00c73c
+}
+.search_option button.selected:after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 15px;
+    right: 15px;
+    border-bottom: 2px solid #00c73c;
+    font-size: 0
+}
+.search_option:after {
+    content: '';
+    display: inline-block;
+    width: 99%;
+    height: 0;
+    vertical-align: top;
+    font-size: 0
+}
+.cover_list .font_small .list_item .username {
+    font-size: 14px;
+    padding-top: 1px
+}
+.cover_list .font_small .list_item .ico_cal,
+.cover_list .font_small .list_item .subject {
+    font-size: 13px;
+    padding-top: 1px
+}
+.cover_list .font_small .list_item .ico_cal {
+    padding-top: 3px
+}
+.cover_list .font_small .list_item .content {
+    font-size: 13px
+}
+.cover_list .font_small .list_item .ico_attach {
+    padding-top: 3px
+}
+.cover_list .font_small .list_item .ico_reply {
+    padding-top: 1px
+}
+.cover_list .font_small .list_item .ico_foward {
+    padding-top: 2px
+}
+.cover_list .font_small .list_item .important {
+    padding-top: 4px
+}
+.cover_list .font_small .list_item .ico_sendmail {
+    top: 0
+}
+.cover_list .font_small .label_domain {
+    position: relative
+}
+.cover_list .font_large .list_item .info_left {
+    margin-bottom: 3px
+}
+.cover_list .font_large .list_item .info_right {
+    padding-top: 4px
+}
+.cover_list .font_large .list_item .username {
+    font-size: 18px;
+    top: 0
+}
+.cover_list .font_large .list_item .ico_cal,
+.cover_list .font_large .list_item .subject {
+    font-size: 17px
+}
+.cover_list .font_large .list_item .ico_cal {
+    padding-top: 4px
+}
+.cover_list .font_large .list_item .content {
+    font-size: 17px
+}
+.cover_list .font_large .list_item .ico_reply {
+    padding-top: 4px
+}
+.cover_list .font_large .list_item .ico_foward {
+    padding-top: 5px
+}
+.cover_list .font_large .list_item .important {
+    padding-top: 6px
+}
+.cover_list .font_large .list_item .ico_sendmail {
+    top: 3px
+}
+.cover_list .font_large .label_domain {
+    position: relative;
+    top: 1px
+}
+.list_bottom {
+    text-align: center
+}
+.list_bottom .list_loading {
+    font-size: 0;
+    padding: 25px 0
+}
+.list_bottom .list_loading .ani_loading {
+    height: 8px;
+    display: inline-block
+}
+.list_bottom .list_loading .ani_loading .ani_obj1,
+.list_bottom .list_loading .ani_loading .ani_obj2,
+.list_bottom .list_loading .ani_loading .ani_obj3 {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 4px;
+    background-color: #999;
+    -webkit-animation: sk-bouncedelay .8s infinite;
+    animation: sk-bouncedelay .8s infinite
+}
+.list_bottom .list_loading .ani_loading .ani_obj1 {
+    -webkit-animation-delay: -.3s;
+    animation-delay: -.3s
+}
+.list_bottom .list_loading .ani_loading .ani_obj,
+.list_bottom .list_loading .ani_loading .ani_obj2 {
+    -webkit-animation-delay: -.15s;
+    animation-delay: -.15s
+}
+.list_bottom .list_loading .ani_loading .ani_obj3 {
+    margin-right: 0
+}
+.list_bottom .btn_more {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    width: 100%;
+    padding: 19px 0;
+    font-size: 13px;
+    color: #333
+}
+.list_bottom .btn_more strong {
+    color: #00c73c;
+    font-weight: 400
+}
+.list_bottom .btn_more:after {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -393px -26px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 9px;
+    height: 5px;
+    display: inline-block;
+    vertical-align: top;
+    vertical-align: middle;
+    margin-left: 5px;
+    position: relative;
+    top: -1px
+}
+.list_bottom .list_paging {
+    padding: 12px 0
+}
+.list_bottom .list_paging .btn_prev {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    padding: 0;
+    font-size: 0;
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -189px -4px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 31px;
+    height: 31px;
+    display: inline-block;
+    vertical-align: top;
+    vertical-align: middle;
+    margin-right: 21px
+}
+.list_bottom .list_paging .btn_prev.disabled,
+.list_bottom .list_paging .btn_prev[disabeld] {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -291px -4px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 31px;
+    height: 31px;
+    display: inline-block;
+    vertical-align: top;
+    vertical-align: middle
+}
+.list_bottom .list_paging .btn_next {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    padding: 0;
+    font-size: 0;
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -257px -4px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 31px;
+    height: 31px;
+    display: inline-block;
+    vertical-align: top;
+    vertical-align: middle;
+    margin-left: 21px
+}
+.list_bottom .list_paging .btn_next.disabled,
+.list_bottom .list_paging .btn_next[disabeld] {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -223px -4px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 31px;
+    height: 31px;
+    display: inline-block;
+    vertical-align: top;
+    vertical-align: middle
+}
+.list_bottom .list_paging .current {
+    color: #00c73c;
+    font-size: 14px;
+    vertical-align: middle
+}
+.list_bottom .list_paging .slash,
+.list_bottom .list_paging .total {
+    font-size: 14px;
+    color: #555;
+    vertical-align: middle
+}
+.attach_file {
+    display: none;
+    padding-top: 2px;
+    overflow: hidden
+}
+.file_list {
+    padding: 4px 0 1px;
+    float: left;
+    position: relative;
+    max-width: 100%;
+    clear: both
+}
+.file_list:after {
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+.file_list li {
+    margin-bottom: 4px
+}
+.file_list li.type_img {
+    width: 46px;
+    height: 46px;
+    box-sizing: border-box;
+    border: 1px solid #e1e1e1;
+    float: left;
+    margin-right: 4px;
+    margin-bottom: 0;
+    vertical-align: top;
+    background-size: cover;
+    background-position: center center
+}
+.file_list li.type_ext {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 100%;
+    line-height: 20px;
+    font-size: 12px;
+    color: #888
+}
+.file_list li.type_ext:before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 18px;
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file/s_file_etc.png);
+    background-size: 16px 18px;
+    vertical-align: top
+}
+.file_list li.type_ext.ext_alz:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file/s_file_alz.png)
+}
+.file_list li.type_ext.ext_bmp:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file/s_file_bmp.png)
+}
+.file_list li.type_ext.ext_doc:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file/s_file_doc.png)
+}
+.file_list li.type_ext.ext_docx:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file/s_file_docx.png)
+}
+.file_list li.type_ext.ext_etc:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file/s_file_etc.png)
+}
+.file_list li.type_ext.ext_exe:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file/s_file_exe.png)
+}
+.file_list li.type_ext.ext_gif:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file/s_file_gif.png)
+}
+.file_list li.type_ext.ext_gul:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file/s_file_gul.png)
+}
+.file_list li.type_ext.ext_htm:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file/s_file_htm.png)
+}
+.file_list li.type_ext.ext_html:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file/s_file_html.png)
+}
+.file_list li.type_ext.ext_hwp:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file/s_file_hwp.png)
+}
+.file_list li.type_ext.ext_ico:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file/s_file_ico.png)
+}
+.file_list li.type_ext.ext_jpeg:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file/s_file_jpeg.png)
+}
+.file_list li.type_ext.ext_jpg:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file/s_file_jpg.png)
+}
+.file_list li.type_ext.ext_mov:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file/s_file_mov.png)
+}
+.file_list li.type_ext.ext_mp3:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file/s_file_mp3.png)
+}
+.file_list li.type_ext.ext_mp4:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file/s_file_mp4.png)
+}
+.file_list li.type_ext.ext_mpeg:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file/s_file_mpeg.png)
+}
+.file_list li.type_ext.ext_ndoc:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file/s_file_ndoc.png)
+}
+.file_list li.type_ext.ext_nfrm:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file/s_file_nfrm.png)
+}
+.file_list li.type_ext.ext_nppt:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file/s_file_nppt.png)
+}
+.file_list li.type_ext.ext_nxls:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file/s_file_nxls.png)
+}
+.file_list li.type_ext.ext_pdf:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file/s_file_pdf.png)
+}
+.file_list li.type_ext.ext_png:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file/s_file_png.png)
+}
+.file_list li.type_ext.ext_ppt:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file/s_file_ppt.png)
+}
+.file_list li.type_ext.ext_pptx:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file/s_file_pptx.png)
+}
+.file_list li.type_ext.ext_rtf:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file/s_file_rtf.png)
+}
+.file_list li.type_ext.ext_tif:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file/s_file_tif.png)
+}
+.file_list li.type_ext.ext_tiff:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file/s_file_tiff.png)
+}
+.file_list li.type_ext.ext_txt:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file/s_file_txt.png)
+}
+.file_list li.type_ext.ext_under:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file/s_file_under.png)
+}
+.file_list li.type_ext.ext_wav:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file/s_file_wav.png)
+}
+.file_list li.type_ext.ext_wma:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file/s_file_wma.png)
+}
+.file_list li.type_ext.ext_xls:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file/s_file_xls.png)
+}
+.file_list li.type_ext.ext_xlsx:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file/s_file_xlsx.png)
+}
+.file_list li.type_ext.ext_zip:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file/s_file_zip.png)
+}
+.file_list li.type_ext:last-child {
+    margin-bottom: 0
+}
+.file_list li.more {
+    position: absolute;
+    right: 5px;
+    bottom: 2px;
+    width: 15px;
+    height: 15px;
+    line-height: 16px;
+    overflow: hidden;
+    color: #fff;
+    font-size: 9px;
+    background-color: rgba(0, 0, 0, .5);
+    text-align: center;
+    margin: 0
+}
+.file_list li.more strong {
+    color: #fff;
+    font-weight: 700
+}
+.cover_list_receipt .list_head .btn_others,
+.cover_list_receipt .list_head .btn_unread {
+    display: none
+}
+.cover_list_receipt .list_item .msg_status,
+.cover_list_receipt .list_item .read_status {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 12px;
+    color: #666;
+    box-sizing: border-box
+}
+.cover_list_receipt .list_item .msg_status {
+    color: #09d246
+}
+.cover_list_receipt .list_item .info_right {
+    padding-right: 0
+}
+.cover_list_receipt .list_item .username {
+    font-weight: 700
+}
+.cover_list_receipt .list_item .date,
+.cover_list_receipt .list_item .subject,
+.cover_list_receipt .list_item .username {
+    color: #111
+}
+.cover_list_receipt .list_item .btn_cancel {
+    display: none;
+    position: absolute;
+    bottom: 9px;
+    right: 15px
+}
+.cover_list_receipt .unread .list_item .meta {
+    padding-right: 58px
+}
+.cover_list_receipt .unread .list_item .meta:before {
+    display: none
+}
+.cover_list_receipt .unread .list_item .read_status {
+    color: #5798fb
+}
+.cover_list_receipt .unread .list_item .info_right {
+    margin-right: -58px
+}
+.cover_list_receipt .unread .list_item .btn_cancel {
+    display: block
+}
+.cover_list_receipt .btn_cancel {
+    border: 1px solid #dedede;
+    border-radius: 1px;
+    background-color: #f2f2f2;
+    color: #666;
+    font-size: 11px;
+    height: 19px;
+    padding: 0 5px;
+    line-height: 16px;
+    overflow: hidden
+}
+.status_label {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    float: left;
+    height: 17px;
+    line-height: 18px;
+    font-size: 10px;
+    border-radius: 17px;
+    padding: 0 7px;
+    box-sizing: border-box;
+    max-width: 80px;
+    margin-right: 8px;
+    font-weight: 700;
+    margin-left: 1px
+}
+.status_label.label_domain {
+    color: #fff;
+    background-color: #5798fb
+}
+.status_label.label_waiting {
+    color: #fff;
+    background-color: #b1b1b1
+}
+.status_label.label_sendfail {
+    color: #fff;
+    background-color: #ff8874
+}
+.status_label.label_sending {
+    color: #fff;
+    background-color: #09d246
+}
+.status_label.label_reserved {
+    color: #888;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    line-height: 16px;
+    max-width: none
+}
+.list_receipt_each .subject {
+    position: relative;
+    padding: 9px 15px 16px 14px;
+    border-bottom: 1px solid #e9e9e9
+}
+.list_receipt_each .subject h2 {
+    padding: 0 0 2px;
+    font-size: 15px;
+    color: #111;
+    line-height: 21px;
+    font-weight: 400
+}
+.list_receipt_each .subject .date {
+    font-size: 13px;
+    color: #888
+}
+.list_receipt_each .subject a {
+    text-decoration: none!important;
+    display: block;
+    padding-right: 24px
+}
+.list_receipt_each .subject a:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -177px -44px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 9px;
+    height: 17px;
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    margin-top: -9px
+}
+.list_receipt_each .cancel_all {
+    border-bottom: 1px solid #e9e9e9;
+    text-align: right;
+    padding: 9px 15px
+}
+.list_receipt_each .list_item {
+    padding-left: 14px
+}
+.list_receipt_each .list_item .user_name {
+    font-weight: 700;
+    margin-right: 4px
+}
+.list_receipt_each .list_item .user_name:empty {
+    display: none
+}
+.list_receipt_each .list_item .date {
+    color: #888
+}
+.list_receipt_each .unread .list_item {
+    padding-right: 75px
+}
+.list_receipt_each .unread .list_item .btn_cancel {
+    top: 50%;
+    margin-top: -11px
+}
+.list_receipt_each .unread .list_item .date {
+    color: #888
+}
+.list_receipt_each .el_cover {
+    display: block;
+    margin-bottom: 3px
+}
+.list_receipt_each .btn_cancel {
+    height: 21px;
+    line-height: 18px
+}
+.cover_write .attach,
+.cover_write .ccbox,
+.cover_write .sender,
+.cover_write .subject,
+.cover_write .target {
+    border-bottom: 1px solid #e9e9e9;
+    padding: 10px 0 0
+}
+.cover_write .title {
+    float: left;
+    padding-left: 14px;
+    min-width: 73px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #777;
+    line-height: 26px;
+    height: 25px;
+    position: relative
+}
+.cover_write .title .link_addrbook {
+    color: inherit
+}
+.cover_write .title .link_addrbook:hover {
+    text-decoration: none
+}
+.cover_write .title a {
+    position: absolute;
+    top: 7px;
+    line-height: 1
+}
+.cover_write .ip {
+    overflow: hidden;
+    font-size: 0;
+    padding-bottom: 7px
+}
+.cover_write .ip .objct {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 100%;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 25px;
+    line-height: 26px;
+    border-radius: 25px;
+    background-color: #eaf9fe;
+    color: #333;
+    font-size: 13px;
+    padding: 0 8px;
+    margin-right: 3px;
+    margin-bottom: 3px
+}
+.cover_write .ip .objct.active {
+    background-color: #aaeaff
+}
+.cover_write .ip .objct.invalid {
+    background-color: #ffe9e3
+}
+.cover_write .ip .objct.invalid.active {
+    background-color: #ff8874;
+    color: #fff
+}
+.cover_write .ip .objct.undef {
+    background-color: #fff2d0
+}
+.cover_write .ip .objct.undef.active {
+    background-color: #ffe18e
+}
+.cover_write .ip .ipt_email {
+    display: inline-block;
+    height: 25px;
+    vertical-align: top;
+    margin-bottom: 3px
+}
+.cover_write .ip .ipt_email input.text {
+    border: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%
+}
+.cover_write .sender {
+    padding-bottom: 10px;
+    padding-right: 15px
+}
+.cover_write .sender .ip {
+    padding-bottom: 0
+}
+.cover_write .sender .slct_box {
+    position: relative;
+    display: block;
+    height: 25px;
+    line-height: 27px;
+    padding-right: 15px
+}
+.cover_write .sender .slct_box .selected_item {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 100%;
+    font-size: 14px;
+    display: block
+}
+.cover_write .sender .slct_box:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -9px -215px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 7px;
+    height: 13px;
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -6px
+}
+.cover_write .subject {
+    padding-bottom: 10px;
+    padding-right: 15px
+}
+.cover_write .subject .text {
+    border: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    height: 25px;
+    font-size: 15px;
+    color: #333
+}
+.cover_write .subject .ip {
+    padding-bottom: 0
+}
+.cover_write .attach .ip {
+    font-size: 0;
+    padding-bottom: 10px
+}
+.cover_write .attach .btn_attach_file {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    font-size: 0;
+    padding: 2px;
+    vertical-align: top
+}
+.cover_write .attach .btn_attach_file:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -268px -91px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 22px;
+    height: 21px;
+    display: inline-block;
+    vertical-align: top
+}
+.cover_write .attach .btn_attach_ndrive {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    font-size: 0;
+    display: inline-block;
+    position: relative;
+    top: 0;
+    padding: 2px;
+    vertical-align: top;
+    margin-right: 13px
+}
+.cover_write .attach .btn_attach_ndrive:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -161px -85px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    vertical-align: top
+}
+.cover_write .attach .divider {
+    display: inline-block;
+    border-right: 1px solid #ccc;
+    width: 0;
+    height: 14px;
+    padding-left: 8px;
+    margin-right: 8px;
+    vertical-align: top;
+    position: relative;
+    top: 6px
+}
+.cover_write .attach .indicator {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 11px;
+    line-height: 13px;
+    padding-top: 0
+}
+.cover_write .attach .indicator .file {
+    color: #999
+}
+.cover_write .attach .indicator .file strong {
+    color: #333;
+    font-weight: 400
+}
+.cover_write .attach .indicator .bigfile {
+    color: #999
+}
+.cover_write .attach .indicator .bigfile strong {
+    font-weight: 400
+}
+.cover_write .attach .file_list {
+    display: block;
+    float: none;
+    border-top: 1px solid #e9e9e9;
+    background-color: #f9f9f9;
+    padding: 10px 15px 4px;
+    font-size: 0
+}
+.cover_write .attach .file_list li {
+    position: relative;
+    padding-bottom: 6px
+}
+.cover_write .attach .file_list li:after {
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+.cover_write .attach .file_list .thmb {
+    width: 35px;
+    height: 35px;
+    float: left;
+    margin-right: 10px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap
+}
+.cover_write .attach .file_list .thmb:before {
+    vertical-align: middle
+}
+.cover_write .attach .file_list .thmb:after {
+    content: '';
+    width: 0;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle
+}
+.cover_write .attach .file_list .thmb .thmb_img {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center center;
+    border: 1px solid #e1e1e1;
+    vertical-align: middle
+}
+.cover_write .attach .file_list .thmb .type_ext {
+    vertical-align: middle
+}
+.cover_write .attach .file_list .thmb .type_ext:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file_rtn/file_etc.png);
+    background-repeat: no-repeat;
+    background-size: 28px 32px;
+    display: inline-block;
+    width: 28px;
+    height: 32px;
+    vertical-align: top
+}
+.cover_write .attach .file_list .thmb .type_ext.ext_alz:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file_rtn/file_alz.png);
+    background-size: 28px 32px
+}
+.cover_write .attach .file_list .thmb .type_ext.ext_bmp:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file_rtn/file_bmp.png);
+    background-size: 28px 32px
+}
+.cover_write .attach .file_list .thmb .type_ext.ext_doc:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file_rtn/file_doc.png);
+    background-size: 28px 32px
+}
+.cover_write .attach .file_list .thmb .type_ext.ext_docx:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file_rtn/file_docx.png);
+    background-size: 28px 32px
+}
+.cover_write .attach .file_list .thmb .type_ext.ext_etc:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file_rtn/file_etc.png);
+    background-size: 28px 32px
+}
+.cover_write .attach .file_list .thmb .type_ext.ext_exe:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file_rtn/file_exe.png);
+    background-size: 28px 32px
+}
+.cover_write .attach .file_list .thmb .type_ext.ext_gif:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file_rtn/file_gif.png);
+    background-size: 28px 32px
+}
+.cover_write .attach .file_list .thmb .type_ext.ext_gul:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file_rtn/file_gul.png);
+    background-size: 28px 32px
+}
+.cover_write .attach .file_list .thmb .type_ext.ext_htm:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file_rtn/file_htm.png);
+    background-size: 28px 32px
+}
+.cover_write .attach .file_list .thmb .type_ext.ext_html:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file_rtn/file_html.png);
+    background-size: 28px 32px
+}
+.cover_write .attach .file_list .thmb .type_ext.ext_hwp:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file_rtn/file_hwp.png);
+    background-size: 28px 32px
+}
+.cover_write .attach .file_list .thmb .type_ext.ext_ico:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file_rtn/file_ico.png);
+    background-size: 28px 32px
+}
+.cover_write .attach .file_list .thmb .type_ext.ext_jpeg:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file_rtn/file_jpeg.png);
+    background-size: 28px 32px
+}
+.cover_write .attach .file_list .thmb .type_ext.ext_jpg:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file_rtn/file_jpg.png);
+    background-size: 28px 32px
+}
+.cover_write .attach .file_list .thmb .type_ext.ext_mov:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file_rtn/file_mov.png);
+    background-size: 28px 32px
+}
+.cover_write .attach .file_list .thmb .type_ext.ext_mp3:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file_rtn/file_mp3.png);
+    background-size: 28px 32px
+}
+.cover_write .attach .file_list .thmb .type_ext.ext_mp4:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file_rtn/file_mp4.png);
+    background-size: 28px 32px
+}
+.cover_write .attach .file_list .thmb .type_ext.ext_mpeg:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file_rtn/file_mpeg.png);
+    background-size: 28px 32px
+}
+.cover_write .attach .file_list .thmb .type_ext.ext_ndoc:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file_rtn/file_ndoc.png);
+    background-size: 28px 32px
+}
+.cover_write .attach .file_list .thmb .type_ext.ext_nfrm:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file_rtn/file_nfrm.png);
+    background-size: 28px 32px
+}
+.cover_write .attach .file_list .thmb .type_ext.ext_nppt:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file_rtn/file_nppt.png);
+    background-size: 28px 32px
+}
+.cover_write .attach .file_list .thmb .type_ext.ext_nxls:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file_rtn/file_nxls.png);
+    background-size: 28px 32px
+}
+.cover_write .attach .file_list .thmb .type_ext.ext_pdf:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file_rtn/file_pdf.png);
+    background-size: 28px 32px
+}
+.cover_write .attach .file_list .thmb .type_ext.ext_png:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file_rtn/file_png.png);
+    background-size: 28px 32px
+}
+.cover_write .attach .file_list .thmb .type_ext.ext_ppt:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file_rtn/file_ppt.png);
+    background-size: 28px 32px
+}
+.cover_write .attach .file_list .thmb .type_ext.ext_pptx:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file_rtn/file_pptx.png);
+    background-size: 28px 32px
+}
+.cover_write .attach .file_list .thmb .type_ext.ext_rtf:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file_rtn/file_rtf.png);
+    background-size: 28px 32px
+}
+.cover_write .attach .file_list .thmb .type_ext.ext_tif:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file_rtn/file_tif.png);
+    background-size: 28px 32px
+}
+.cover_write .attach .file_list .thmb .type_ext.ext_tiff:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file_rtn/file_tiff.png);
+    background-size: 28px 32px
+}
+.cover_write .attach .file_list .thmb .type_ext.ext_txt:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file_rtn/file_txt.png);
+    background-size: 28px 32px
+}
+.cover_write .attach .file_list .thmb .type_ext.ext_under:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file_rtn/file_under.png);
+    background-size: 28px 32px
+}
+.cover_write .attach .file_list .thmb .type_ext.ext_wav:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file_rtn/file_wav.png);
+    background-size: 28px 32px
+}
+.cover_write .attach .file_list .thmb .type_ext.ext_wma:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file_rtn/file_wma.png);
+    background-size: 28px 32px
+}
+.cover_write .attach .file_list .thmb .type_ext.ext_xls:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file_rtn/file_xls.png);
+    background-size: 28px 32px
+}
+.cover_write .attach .file_list .thmb .type_ext.ext_xlsx:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file_rtn/file_xlsx.png);
+    background-size: 28px 32px
+}
+.cover_write .attach .file_list .thmb .type_ext.ext_zip:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/im/file_rtn/file_zip.png);
+    background-size: 28px 32px
+}
+.cover_write .attach .file_list .desc {
+    padding: 9px 0 5px;
+    border-top: 1px solid #e9e9e9;
+    font-size: 9px;
+    color: #666
+}
+.cover_write .attach .file_list .desc strong {
+    color: #f30;
+    font-weight: 400
+}
+.cover_write .attach .file_list .details {
+    font-size: 13px;
+    overflow: hidden;
+    height: 35px;
+    line-height: 37px;
+    white-space: nowrap;
+    padding-right: 100px
+}
+.cover_write .attach .file_list .details .el_cover {
+    color: #111;
+    font-weight: 400;
+    vertical-align: top
+}
+.cover_write .attach .file_list .details .size {
+    display: inline-block;
+    vertical-align: top;
+    color: #777
+}
+.cover_write .attach .file_list .btn_del {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    font-size: 0;
+    padding: 13px;
+    position: absolute;
+    right: -13px;
+    top: 0
+}
+.cover_write .attach .file_list .btn_del:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -67px -194px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    vertical-align: top
+}
+.cover_write .textbox {
+    padding: 17px 15px
+}
+.cover_write .textbox .editor {
+    border: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 174px
+}
+.cover_write .btn_write_tome {
+    color: #f3fff7;
+    font-size: 11px;
+    border: 1px solid #ccf4d8;
+    border-radius: 23px;
+    background-color: transparent;
+    height: 23px;
+    line-height: 23px;
+    padding: 0 6px;
+    margin-top: 4px;
+    margin-right: 10px
+}
+.cover_write.write_tome .btn_write_tome {
+    color: #008b2a;
+    border-color: #008b2a
+}
+.cover_write.write_tome .btn_expand_ip,
+.cover_write.write_tome .target {
+    display: none
+}
+.cover_write .btn_contact {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    font-size: 0;
+    float: right;
+    padding: 3px 5px;
+    margin-right: 10px
+}
+.cover_write .btn_contact:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -395px -125px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: top
+}
+.cover_write .btn_contact.active:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -372px -125px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: top
+}
+.cover_write .objct_task_bar {
+    border-top: 1px solid #dedede;
+    padding: 10px 15px
+}
+.cover_write .objct_task_bar:after {
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+.cover_write .objct_task_bar .el_cover {
+    height: 25px;
+    line-height: 26px;
+    display: block;
+    overflow: hidden
+}
+.cover_write .objct_task_bar .action_cover {
+    float: right;
+    padding-left: 10px
+}
+.cover_write .objct_task_bar .action_cover .btn_cancel,
+.cover_write .objct_task_bar .action_cover .btn_remove {
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    box-sizing: border-box;
+    font-size: 11px;
+    height: 25px;
+    line-height: 22px;
+    background-color: #f2f2f2;
+    border-color: #dedede;
+    color: #666;
+    padding: 0 8px
+}
+.cover_write .auto_lst {
+    background-color: #f8f8f8
+}
+.cover_write .auto_lst li {
+    border-top: 1px solid #dedede
+}
+.cover_write .auto_lst a {
+    display: block;
+    color: #333;
+    font-size: 14px;
+    padding: 6px 10px;
+    text-decoration: none!important
+}
+.cover_write .auto_lst em {
+    color: #438afe;
+    font-weight: 400
+}
+.cover_write .auto_lst strong {
+    font-weight: 400
+}
+.cover_write .target {
+    position: relative
+}
+.cover_write .btn_expand_ip {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    font-size: 0;
+    vertical-align: middle;
+    padding: 1px 0 1px 1px;
+    position: absolute;
+    width: 82px;
+    top: 5px;
+    left: 0;
+    text-align: right
+}
+.cover_write .btn_expand_ip:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -182px -173px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: top
+}
+.cover_write .carboncopy {
+    display: none
+}
+.cover_write.expand_ip .carboncopy {
+    display: block
+}
+.cover_write.expand_ip .btn_expand_ip:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -163px -173px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: top
+}
+.read_body .att_file h3,
+.read_body .sender h3 {
+    position: absolute;
+    top: 17px;
+    left: 14px;
+    line-height: 1;
+    font-size: 13px;
+    color: #777;
+    font-weight: 400
+}
+.read_body .att_file .btn_fold,
+.read_body .sender .btn_fold {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    padding: 0;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 82px;
+    height: 25px;
+    line-height: 27px;
+    text-align: right;
+    font-size: 0
+}
+.read_body .att_file .btn_fold:before,
+.read_body .sender .btn_fold:before {
+    content: '';
+    position: relative;
+    top: 1px
+}
+.read_body .sender {
+    position: relative;
+    min-height: 43px;
+    border-bottom: 1px solid #e9e9e9
+}
+.read_body .sender .btn_fold:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -163px -173px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: top;
+    vertical-align: middle
+}
+.read_body .sender .user {
+    padding: 10px 15px 1px 88px;
+    min-height: 32px
+}
+.read_body .sender .user span {
+    display: inline-block;
+    height: 25px;
+    margin: 0 0 5px;
+    padding: 0 10px;
+    background-color: #eaf9fe;
+    border-radius: 25px;
+    font-size: 13px;
+    color: #111;
+    line-height: 27px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 100%;
+    box-sizing: border-box
+}
+.read_body .sender .warning {
+    background-color: #f9edeb;
+    padding: 8px 18px 6px 37px;
+    text-indent: -23px;
+    line-height: 1.4em;
+    font-size: 13px
+}
+.read_body .sender .warning .ico_caution {
+    display: block;
+    font-weight: 700;
+    color: #222
+}
+.read_body .sender .warning .ico_caution:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -201px -173px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 6px;
+    position: relative;
+    top: 1px
+}
+.read_body .sender .warning .desc {
+    color: #333;
+    text-indent: 0
+}
+.read_body .sender .target {
+    position: relative;
+    border-top: 1px solid #e9e9e9
+}
+.read_body .sender.hide button.btn_fold:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -182px -173px;
+    background-size: 509px 232px
+}
+.read_body .sender.hide .target {
+    display: none
+}
+.read_body .subject {
+    position: relative;
+    padding: 9px 15px 16px 14px;
+    border-bottom: 1px solid #e9e9e9
+}
+.read_body .subject h2 {
+    padding: 0 0 2px;
+    font-size: 15px;
+    color: #111;
+    line-height: 21px;
+    font-weight: 400
+}
+.read_body .subject .date {
+    font-size: 13px;
+    color: #888
+}
+.read_body .subject .utility {
+    position: absolute;
+    bottom: 6px;
+    right: 10px
+}
+.read_body .subject .utility input[type=checkbox] {
+    -webkit-appearance: none;
+    margin: 0;
+    background-color: transparent;
+    border: 0;
+    text-align: center;
+    padding: 0;
+    width: 28px;
+    height: 29px;
+    vertical-align: top;
+    position: absolute;
+    opacity: 0
+}
+.read_body .subject .utility input[type=checkbox]+label:before {
+    content: '';
+    vertical-align: top
+}
+.read_body .subject .utility input[type=checkbox].btn_zoom+label {
+    padding: 5px 6px
+}
+.read_body .subject .utility input[type=checkbox].btn_zoom+label:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -63px -173px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: top
+}
+.read_body .subject .utility input[type=checkbox].btn_star+label {
+    padding: 5px 6px
+}
+.read_body .subject .utility input[type=checkbox].btn_star+label:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -465px -4px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 19px;
+    height: 19px;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    top: -1px
+}
+.read_body .subject .utility input[type=checkbox]:checked.btn_zoom+label:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -42px -173px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: top
+}
+.read_body .subject .utility input[type=checkbox]:checked.btn_star+label:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -487px -4px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 19px;
+    height: 19px;
+    display: inline-block;
+    vertical-align: top
+}
+.read_body .subject .utility label {
+    display: inline-block
+}
+.read_body .att_file {
+    position: relative;
+    min-height: 43px;
+    border-bottom: 1px solid #e9e9e9
+}
+.read_body .att_file .btn_fold:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -163px -173px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: top;
+    vertical-align: middle
+}
+.read_body .att_file .count {
+    display: block;
+    height: 45px;
+    padding: 15px 15px 6px 84px;
+    font-size: 13px;
+    color: #333;
+    box-sizing: border-box
+}
+.read_body .att_file .btn_all_save {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    height: 25px;
+    padding: 0 7px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    background-color: #fff;
+    font-size: 12px;
+    color: #666;
+    line-height: 23px
+}
+.read_body .att_file .btn_all_save[disabled] {
+    opacity: .5
+}
+.read_body .att_file .btn_all_save:before {
+    content: '';
+    margin: -2px 3px 0 0;
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -375px -150px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 11px;
+    display: inline-block;
+    vertical-align: top;
+    vertical-align: middle
+}
+.read_body .att_file .file {
+    padding: 8px 15px 7px;
+    border-top: 1px solid #dedede;
+    background-color: #f9f9f9
+}
+.read_body .att_file .file li {
+    position: relative;
+    padding: 5px 18px 4px 0;
+    overflow: hidden
+}
+.read_body .att_file .file li:after {
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+.read_body .att_file .file a {
+    display: inline-block;
+    max-width: 75%
+}
+.read_body .att_file .file a:active,
+.read_body .att_file .file a:hover {
+    text-decoration: none
+}
+.read_body .att_file .file .infor {
+    line-height: 19px;
+    padding: 0;
+    font-size: 13px;
+    color: #bbb;
+    vertical-align: top
+}
+.read_body .att_file .file .infor strong {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 100%;
+    display: block;
+    padding-right: 3px;
+    color: #1b96ff;
+    font-weight: 400
+}
+.read_body .att_file .file .infor span {
+    float: right
+}
+.read_body .att_file .file .infor:after {
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+.read_body .att_file .file button {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    padding: 0;
+    font-size: 0;
+    margin: 0 1px 0 0;
+    vertical-align: top
+}
+.read_body .att_file .file button.btn_remove {
+    position: absolute;
+    top: 5px;
+    right: -5px;
+    padding: 4px
+}
+.read_body .att_file .file button.btn_cloud,
+.read_body .att_file .file button.btn_save {
+    float: left;
+    margin-right: 5px
+}
+.read_body .att_file .file button.btn_cloud {
+    margin-right: 10px
+}
+.read_body .att_file .file button:before {
+    content: ''
+}
+.read_body .att_file .file button.btn_save:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -157px -150px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 19px;
+    height: 19px;
+    display: inline-block;
+    vertical-align: top
+}
+.read_body .att_file .file button.btn_cloud:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -69px -150px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 19px;
+    height: 19px;
+    display: inline-block;
+    vertical-align: top
+}
+.read_body .att_file .file button.btn_remove:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -67px -194px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    vertical-align: top
+}
+.read_body .att_file .file .removed .infor {
+    text-decoration: line-through
+}
+.read_body .att_file .file .removed .infor strong {
+    color: #999
+}
+.read_body .att_file .file .removed .infor span {
+    text-decoration: line-through
+}
+.read_body .att_file .file .removed .btn_save:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -179px -150px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 19px;
+    height: 19px;
+    display: inline-block;
+    vertical-align: top
+}
+.read_body .att_file .file .removed .btn_cloud:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -91px -150px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 19px;
+    height: 19px;
+    display: inline-block;
+    vertical-align: top
+}
+.read_body .att_file .file .removed .btn_remove {
+    display: none
+}
+.read_body .att_file.hide button.btn_fold:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -182px -173px;
+    background-size: 509px 232px
+}
+.read_body .att_file.hide .file {
+    display: none
+}
+.read_body .readwrap {
+    padding: 17px 15px 11px;
+    margin-bottom: 20px;
+    font-size: 1em;
+    color: #000;
+    line-height: 1.5;
+    overflow: hidden
+}
+.read_body .readwrap .loading {
+    padding: 15px 0 30px;
+    font-size: 14px;
+    color: #555;
+    text-align: center
+}
+.read_body .readwrap .loading em {
+    display: inline-block;
+    width: 27px;
+    height: 8px;
+    margin: 0 4px 0 0;
+    background: url(https://ssl.pstatic.net/static/m/mail/im/loading.gif) 0 0/27px 8px no-repeat;
+    vertical-align: middle
+}
+.read_body .readwrap .scale {
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0
+}
+.read_body .readwrap h4 {
+    position: static;
+    font-size: normal;
+    line-height: normal
+}
+.read_body .readwrap a {
+    text-decoration: underline;
+    color: #00f
+}
+.read_body .readwrap a:visited {
+    color: #518
+}
+.read_body .readwrap ol,
+.read_body .readwrap ul {
+    margin: .7em 0 .7em 1.5em
+}
+.read_body .readwrap ol li {
+    list-style: decimal
+}
+.read_body .readwrap ul li {
+    list-style: disc
+}
+.read_body .readwrap dl {
+    margin: .7em 0
+}
+.read_body .readwrap dl dd {
+    margin-left: 1.5em
+}
+.read_body .readwrap p {
+    margin: .7em 0
+}
+.read_body .readwrap button {
+    overflow: auto;
+    border: 1px outset #037;
+    background-color: #f2f2f2
+}
+.read_body .readwrap table td a {
+    display: inline-block
+}
+.read_body .readwrap strong {
+    font-weight: 700
+}
+.read_body .readwrap address,
+.read_body .readwrap em {
+    font-style: italic
+}
+.read_body .mail_slct {
+    position: fixed;
+    bottom: 50px;
+    right: 11px;
+    z-index: 25;
+    -webkit-backface-visibility: hidden
+}
+.read_body .mail_slct .read_prev_mail {
+    background-color: transparent;
+    padding: 0;
+    font-size: 0;
+    margin-right: 4px
+}
+.read_body .mail_slct .read_prev_mail:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -32px -194px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 8px;
+    height: 14px;
+    display: inline-block;
+    vertical-align: top
+}
+.read_body .mail_slct .read_next_mail {
+    background-color: transparent;
+    padding: 0;
+    font-size: 0
+}
+.read_body .mail_slct .read_next_mail:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -43px -194px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 8px;
+    height: 14px;
+    display: inline-block;
+    vertical-align: top
+}
+.read_body .mail_slct .read_next_mail,
+.read_body .mail_slct .read_prev_mail {
+    width: 34px;
+    height: 34px;
+    border: 1px solid #d3d3d3;
+    border-radius: 1px;
+    background-color: rgba(255, 255, 255, .7);
+    vertical-align: top
+}
+.read_body .read_preview {
+    padding-bottom: 30px
+}
+.read_body .read_preview .tit {
+    font-size: 12px;
+    color: #777;
+    padding: 15px 15px 14px;
+    position: relative
+}
+.read_body .read_preview .tit strong {
+    color: #00c73c;
+    font-weight: 400
+}
+.read_body .read_preview .tit:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 15px;
+    right: 15px;
+    height: 0;
+    border-top: 1px solid #e9e9e9
+}
+.read_body .read_preview .preview_list {
+    overflow: hidden
+}
+.read_body .read_preview .preview_list li {
+    width: 130px;
+    padding: 0 15px;
+    float: left
+}
+.read_body .read_preview .preview_list li a:hover {
+    text-decoration: none
+}
+.read_body .read_preview .preview_list .image {
+    white-space: nowrap;
+    display: block;
+    width: 130px;
+    height: 130px;
+    text-align: center
+}
+.read_body .read_preview .preview_list .image:before {
+    vertical-align: middle
+}
+.read_body .read_preview .preview_list .image:after {
+    content: '';
+    width: 0;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle
+}
+.read_body .read_preview .preview_list .image img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle
+}
+.read_body .read_preview .preview_list .file_name {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 100%;
+    display: block;
+    font-size: 12px;
+    color: #888;
+    text-align: center;
+    padding: 10px 0 17px
+}
+.read_body .read_action {
+    background-color: #f9f9f9;
+    border-top: 1px solid #e9e9e9;
+    overflow: hidden;
+    position: relative
+}
+.read_body .read_action .btn_delete,
+.read_body .read_action .btn_edit_mail,
+.read_body .read_action .btn_foward,
+.read_body .read_action .btn_reply {
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    float: left;
+    font-size: 15px;
+    width: 34%;
+    padding: 14px 0 15px;
+    color: #666;
+    height: 45px;
+    position: relative;
+    line-height: 17px;
+    box-sizing: border-box;
+    vertical-align: top
+}
+.read_body .read_action .btn_delete:before,
+.read_body .read_action .btn_edit_mail:before,
+.read_body .read_action .btn_foward:before,
+.read_body .read_action .btn_reply:before {
+    content: '';
+    position: relative
+}
+.read_body .read_action .btn_reply {
+    padding-left: 12px
+}
+.read_body .read_action .btn_foward {
+    width: 32%
+}
+.read_body .read_action .btn_foward:after {
+    content: '';
+    height: 15px;
+    border-right: 1px solid #dfdfdf;
+    position: absolute;
+    left: 0;
+    top: 15px
+}
+.read_body .read_action .btn_edit_mail {
+    padding-left: 12px
+}
+.read_body .read_action .btn_delete {
+    padding-right: 12px
+}
+.read_body .read_action .btn_delete:after {
+    content: '';
+    height: 15px;
+    border-right: 1px solid #dfdfdf;
+    position: absolute;
+    left: 0;
+    top: 15px
+}
+@supports (display: flex) {
+    .att_file .file li a {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        align-items: center
+    }
+    .att_file .file li strong {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        max-width: 100%;
+        -webkit-box-flex: 1;
+        -moz-box-flex: 0 1 auto;
+        -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
+        box-sizing: border-box;
+        display: block
+    }
+    .att_file .file li span {
+        -webkit-box-flex: 0;
+        -moz-box-flex: 0 0 auto;
+        -webkit-flex: 0 0 auto;
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        box-sizing: border-box;
+        display: block
+    }
+}
+.invite_area .invite_cal {
+    padding: 15px;
+    position: relative;
+    text-align: center
+}
+.invite_area .invite_cal:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    right: 15px;
+    border-bottom: 1px solid #dedede
+}
+.invite_area .invite_cal .date {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: 0 -68px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 54px;
+    height: 54px;
+    display: inline-block;
+    vertical-align: top;
+    color: #9261f1;
+    font-weight: 700;
+    font-size: 13px;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 15px;
+    line-height: 38px;
+    margin-bottom: 10px
+}
+.invite_area .invite_cal .invite_title {
+    font-size: 15px;
+    color: #111;
+    font-weight: 700;
+    margin-bottom: 7px
+}
+.invite_area .invite_cal .period,
+.invite_area .invite_cal .place {
+    font-size: 11px;
+    color: #888;
+    line-height: 15px;
+    font-weight: 400
+}
+.invite_area .invite_cal .btn_task {
+    padding: 10px 0 0
+}
+.invite_area .invite_cal .btn_task button {
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 20px;
+    height: 27px;
+    line-height: 25px;
+    width: 60px;
+    font-size: 13px;
+    background-color: transparent;
+    -webkit-transition: background-color .2s;
+    margin-right: 1px
+}
+.invite_area .invite_cal .btn_task button.disabled {
+    background-color: #f0f0f0;
+    border-color: #cecece;
+    color: #919191;
+    pointer-events: none
+}
+.invite_area .invite_cal .btn_task .btn_apply {
+    border-color: #00c73c;
+    color: #00c73c
+}
+.invite_area .invite_cal .btn_task .btn_apply .icon {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -415px -173px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 12px;
+    height: 9px;
+    display: inline-block;
+    vertical-align: top
+}
+.invite_area .invite_cal .btn_task .btn_apply.active {
+    background-color: #00c73c;
+    color: #fff
+}
+.invite_area .invite_cal .btn_task .btn_apply.active .icon {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -385px -173px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 12px;
+    height: 9px;
+    display: inline-block;
+    vertical-align: top
+}
+.invite_area .invite_cal .btn_task .btn_apply.disabled .icon {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -400px -173px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 12px;
+    height: 9px;
+    display: inline-block;
+    vertical-align: top
+}
+.invite_area .invite_cal .btn_task .btn_pending {
+    border-color: #ccc;
+    color: #666
+}
+.invite_area .invite_cal .btn_task .btn_pending .icon {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -19px -215px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 7px;
+    height: 11px;
+    display: inline-block;
+    vertical-align: top
+}
+.invite_area .invite_cal .btn_task .btn_pending.active {
+    background-color: #ccc;
+    color: #fff
+}
+.invite_area .invite_cal .btn_task .btn_pending.active .icon {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -39px -215px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 7px;
+    height: 11px;
+    display: inline-block;
+    vertical-align: top
+}
+.invite_area .invite_cal .btn_task .btn_pending.disabled .icon {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -29px -215px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 7px;
+    height: 11px;
+    display: inline-block;
+    vertical-align: top
+}
+.invite_area .invite_cal .btn_task .btn_reject {
+    border-color: #fd4a4d;
+    color: #fd4a4d
+}
+.invite_area .invite_cal .btn_task .btn_reject .icon {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -93px -194px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    vertical-align: top
+}
+.invite_area .invite_cal .btn_task .btn_reject.active {
+    background-color: #fd4a4d;
+    color: #fff
+}
+.invite_area .invite_cal .btn_task .btn_reject.active .icon {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -54px -194px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    vertical-align: top
+}
+.invite_area .invite_cal .btn_task .btn_reject.disabled .icon {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -80px -194px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    vertical-align: top
+}
+.invite_area .invite_cal .btn_task .icon {
+    vertical-align: middle!important;
+    margin-right: 4px;
+    position: relative;
+    top: -1px
+}
+.invite_area .invite_info .link_cal {
+    border-bottom: 1px solid #dcdcdc;
+    line-height: 38px;
+    height: 37px;
+    display: block;
+    text-align: center;
+    color: #9261f1;
+    font-size: 13px;
+    text-decoration: none
+}
+.invite_area .invite_info .arrow_right {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -504px -91px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 5px;
+    display: inline-block;
+    vertical-align: top;
+    vertical-align: middle;
+    margin-left: 4px;
+    height: get-sprite-height(ical_ico_arrow_right)3
+}
+.invite_area .invite_info .desc {
+    padding: 10px 30px;
+    color: #7a7d80;
+    text-indent: -18px;
+    font-size: 11px;
+    line-height: 1.2
+}
+.invite_area .invite_info .desc strong {
+    color: #8b48dc;
+    font-weight: 400
+}
+.invite_area .invite_info .ico_caution {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -292px -173px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 13px;
+    display: inline-block;
+    vertical-align: top;
+    vertical-align: middle;
+    height: get-sprite-height(ical_ico_caution)1;
+    margin-right: 4px
+}
+.invite_result {
+    position: relative;
+    padding: 15px 13px 14px 62px;
+    white-space: nowrap
+}
+.invite_result:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -136px -44px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 38px;
+    height: 38px;
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    left: 15px;
+    top: 15px
+}
+.invite_result:after {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 38px;
+    vertical-align: middle
+}
+.invite_result .msg_cover {
+    display: inline-block;
+    vertical-align: middle
+}
+.invite_result .desc {
+    font-size: 13px;
+    color: #111;
+    line-height: 19px;
+    white-space: normal
+}
+.invite_result .sub_desc {
+    font-size: 11px;
+    white-space: normal;
+    line-height: 15px;
+    color: #999
+}
+.cover_setting {
+    background-color: #f9f9f9
+}
+.cover_setting .setting_body {
+    background-color: #fff
+}
+.set_lst li {
+    position: relative;
+    height: 50px;
+    line-height: 52px;
+    padding: 0 15px;
+    border-bottom: 1px solid #e9e9e9;
+    text-align: right;
+    vertical-align: middle
+}
+.set_lst li h2 {
+    float: left;
+    height: 50px;
+    font-size: 15px;
+    color: #111;
+    font-weight: 400
+}
+.set_lst li span.ico {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    height: 50px;
+    white-space: nowrap
+}
+.set_lst li span.ico:after {
+    content: '';
+    width: 0;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle
+}
+.set_lst li span.ico:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -177px -64px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 9px;
+    height: 17px;
+    display: inline-block;
+    content: '';
+    vertical-align: middle;
+    position: relative;
+    top: -1px
+}
+.set_lst li a {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 100%;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 50px;
+    padding: 0 20px 0 8px;
+    font-size: 15px;
+    color: #888;
+    vertical-align: middle
+}
+.set_lst li a:hover,
+.set_lst li a:link {
+    text-decoration: none
+}
+.set_lst li a strong {
+    color: #00c73c;
+    font-weight: 400
+}
+.set_lst li h2+a {
+    display: block
+}
+.set_lst li .font_size {
+    white-space: nowrap;
+    position: relative;
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 35px;
+    vertical-align: top
+}
+.set_lst li .font_size:before {
+    vertical-align: middle
+}
+.set_lst li .font_size:after {
+    content: '';
+    width: 0;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle
+}
+.set_lst li .font_size strong {
+    display: inline-block;
+    padding: 0;
+    color: #888;
+    font-weight: 400;
+    vertical-align: middle
+}
+.set_lst li .font_size button {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    padding: 0;
+    font-size: 0;
+    position: absolute;
+    top: 50%;
+    margin-top: -10px
+}
+.set_lst li .font_size button.btn_small {
+    left: 0;
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -25px -125px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    vertical-align: top
+}
+.set_lst li .font_size button.btn_large {
+    right: 0;
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -136px -85px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    vertical-align: top
+}
+.set_lst li .chk {
+    white-space: nowrap;
+    position: relative;
+    display: block;
+    height: 50px;
+    overflow: hidden;
+    vertical-align: middle
+}
+.set_lst li .chk:before {
+    vertical-align: middle
+}
+.set_lst li .chk:after {
+    content: '';
+    width: 0;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle
+}
+.set_lst li .chk input[type=checkbox] {
+    -webkit-appearance: none;
+    width: 45px;
+    height: 22px;
+    overflow: hidden;
+    background-color: #d1d1d1;
+    border: 0;
+    border-radius: 22px;
+    vertical-align: middle;
+    position: relative;
+    top: -2px
+}
+.set_lst li .chk input[type=checkbox]:before {
+    content: 'OFF';
+    display: block;
+    height: 100%;
+    font-size: 14px;
+    color: #fff;
+    line-height: 22px;
+    text-align: center
+}
+.set_lst li .chk input[type=checkbox]:checked {
+    width: 40px;
+    background-color: #00c73c
+}
+.set_lst li .chk input[type=checkbox]:checked:before {
+    content: 'ON'
+}
+.set_lst_sub li {
+    position: relative;
+    height: 50px;
+    overflow: hidden;
+    padding: 0 15px;
+    border-bottom: 1px solid #e9e9e9
+}
+.set_lst_sub li input[type=checkbox],
+.set_lst_sub li input[type=radio] {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -217px -63px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    vertical-align: top;
+    -webkit-appearance: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    position: absolute;
+    top: 13px;
+    left: 14px
+}
+.set_lst_sub li input[type=checkbox]:checked,
+.set_lst_sub li input[type=radio]:checked {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -189px -63px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    vertical-align: top
+}
+.set_lst_sub li label {
+    display: block;
+    height: 50px;
+    padding: 0 0 0 35px;
+    font-size: 15px;
+    color: #111;
+    line-height: 52px;
+    vertical-align: middle;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 100%
+}
+.set_lst_timezone .set_lst_sub li label {
+    font-size: 14px
+}
+.set_lst_sub li .slct_box {
+    position: relative;
+    padding-right: 20px;
+    padding-left: 10px;
+    overflow: hidden
+}
+.set_lst_sub li .slct_box:before {
+    content: '';
+    position: absolute;
+    top: 22px;
+    right: 0;
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -379px -26px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 11px;
+    height: 6px;
+    display: inline-block;
+    vertical-align: top
+}
+.set_lst_sub li .slct_box .selected_item {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 100%;
+    display: block;
+    float: none;
+    padding-left: 0;
+    text-align: right;
+    color: #888;
+    font-size: 15px
+}
+.set_lst_sub.sender_type li {
+    height: auto;
+    min-height: 50px
+}
+.set_lst_sub.sender_type li:after {
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+.set_lst_sub.sender_type li .sign_box {
+    clear: both;
+    margin: 0 -15px;
+    padding: 15px 22px;
+    border-top: 1px solid #e9e9e9
+}
+.set_lst_sub.sender_type li .sign_box textarea {
+    height: 45px
+}
+.set_lst_sub.sender_type li label {
+    float: left
+}
+.sign_box {
+    padding: 15px 17px 0
+}
+.sign_box textarea {
+    width: 100%;
+    height: 180px;
+    border: 0;
+    font-size: 15px;
+    color: #999;
+    line-height: 1.5em
+}
+.sign_box textarea:focus {
+    color: #333
+}
+.sign_box .byte {
+    padding: 0 3px;
+    text-align: right;
+    font-size: 15px;
+    color: #111
+}
+.sign_box .byte strong {
+    color: #00c73c;
+    font-weight: 400
+}
+.sign_box .byte strong.empty {
+    color: #888
+}
+.sender_infor {
+    padding: 11px 20px 9px;
+    border-bottom: 1px solid #e9e9e9;
+    font-size: 12px;
+    color: #888;
+    line-height: 15px
+}
+.setting_footer {
+    height: 100px;
+    background-color: #f9f9f9;
+    text-align: center
+}
+.setting_footer .btn_box {
+    padding: 10px 0 0
+}
+.setting_footer .btn_box button {
+    height: 27px;
+    margin: 0 2px;
+    padding: 0 8px;
+    background-color: #f1f1f1;
+    border: 1px solid #ececec;
+    font-size: 12px;
+    color: #888;
+    vertical-align: middle
+}
+.setting_footer .btn_box button.me {
+    box-sizing: border-box;
+    padding-top: 6px
+}
+.setting_footer .btn_box button.me:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -136px -110px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 22px;
+    height: 8px;
+    display: inline-block;
+    vertical-align: top
+}
+.setting_footer .link_box {
+    padding: 6px 0 0
+}
+.setting_footer .link_box a {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0 6px;
+    font-size: 11px;
+    color: #999
+}
+.setting_footer .link_box a:before {
+    content: '';
+    position: absolute;
+    top: 1px;
+    width: 1px;
+    height: 10px;
+    margin-left: -7px;
+    overflow: hidden;
+    background-color: #ececec;
+    vertical-align: middle
+}
+.setting_footer .link_box a:first-child:before {
+    display: none
+}
+.setting_footer address {
+    padding: 1px 0 0;
+    font-size: 11px;
+    color: #999
+}
+.setting_footer address a {
+    color: #999
+}
+.ly_context {
+    position: absolute;
+    max-width: 100%;
+    z-index: 50;
+    box-shadow: 0 0 3px #e2e2e2;
+    border: 1px solid #dfdfdf;
+    background-color: #fff;
+    line-height: normal
+}
+.ly_item_list li {
+    border-bottom: 1px solid #dfdfdf;
+    min-width: 98px;
+    position: relative
+}
+.ly_item_list li:last-child {
+    border: 0
+}
+.ly_item_list button,
+.ly_item_list label {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    font-size: 0;
+    font-size: 14px;
+    color: #555;
+    height: 41px;
+    line-height: 43px;
+    overflow: hidden;
+    padding: 0 10px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left
+}
+.ly_item_list label {
+    display: block;
+    cursor: pointer
+}
+.ly_task_more {
+    right: 40px;
+    top: 47px
+}
+.ly_address_group .ly_item_list li {
+    min-width: 107px
+}
+.ly_address_group .ly_item_list li button {
+    font-size: 12px
+}
+.ly_address_group .nav_group {
+    border-top: 1px solid #dfdfdf;
+    background-color: #f9f9f9
+}
+.ly_address_group .btn_next,
+.ly_address_group .btn_prev {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    padding: 0;
+    font-size: 0;
+    vertical-align: top;
+    height: 35px;
+    width: 50%
+}
+.ly_address_group .btn_next.disabled:before,
+.ly_address_group .btn_next[disabled]:before,
+.ly_address_group .btn_prev.disabled:before,
+.ly_address_group .btn_prev[disabled]:before {
+    opacity: .3
+}
+.ly_address_group .btn_prev {
+    float: left;
+    position: relative
+}
+.ly_address_group .btn_prev:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -10px -194px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 8px;
+    height: 15px;
+    display: inline-block;
+    vertical-align: top
+}
+.ly_address_group .btn_prev:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    border-right: 1px solid #dfdfdf
+}
+.ly_address_group .btn_next:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -21px -194px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 8px;
+    height: 15px;
+    display: inline-block;
+    vertical-align: top
+}
+.ly_confirm {
+    max-width: 100%;
+    z-index: 50;
+    white-space: nowrap;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    width: 100vw;
+    height: 100vh
+}
+.ly_confirm:before {
+    vertical-align: middle
+}
+.ly_confirm:after {
+    content: '';
+    width: 0;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle
+}
+.ly_confirm .ly_content {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    z-index: 50;
+    background-color: #fff;
+    box-shadow: 0 0 3px #888
+}
+.ly_confirm .tit {
+    height: 43px;
+    line-height: 45px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    background-color: #00c73c
+}
+.ly_confirm .msg_body {
+    padding: 22px 10px;
+    font-size: 13px;
+    color: #111;
+    line-height: 17px
+}
+.ly_confirm .btn_close {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    font-size: 0;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    padding: 10px
+}
+.ly_confirm .btn_close:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -358px -150px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    vertical-align: top
+}
+.ly_confirm .btn_cover {
+    padding: 0 15px 15px;
+    font-size: 0
+}
+.ly_confirm .btn_cover .btn_gray,
+.ly_confirm .btn_cover .btn_green {
+    height: 35px;
+    line-height: 32px;
+    min-width: 97px
+}
+.ly_confirm .btn_cover .btn_gray+.btn_green {
+    margin-left: 5px
+}
+.ly_draft .ly_content,
+.ly_tome_alert .ly_content {
+    min-width: 235px
+}
+.ly_alert_msg,
+.ly_alert_msg_gray {
+    max-width: 100%;
+    z-index: 50;
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    height: 37px;
+    width: 100%;
+    transition: opacity .3s
+}
+.ly_alert_msg .msgbox {
+    display: block;
+    position: relative;
+    height: 37px;
+    margin: 0 15px
+}
+.ly_alert_msg .msgbox .bg {
+    background: rgba(102, 102, 102, .9);
+    border-radius: 1px;
+    color: #f8f8f8;
+    font-size: 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10
+}
+.ly_alert_msg .msgbox .txt {
+    position: relative;
+    color: #f8f8f8;
+    font-size: 12px;
+    line-height: 37px;
+    z-index: 20;
+    text-align: center
+}
+.ly_alert_msg .msgbox .txt a,
+.ly_alert_msg .msgbox .txt strong {
+    color: #17e154
+}
+.ly_alert_msg .msgbox .txt a {
+    text-decoration: underline
+}
+.ly_alert_msg_gray {
+    text-align: center;
+    height: 27px;
+    line-height: 28px;
+    bottom: 13px
+}
+.ly_alert_msg_gray .msgbox {
+    display: inline-block;
+    background-color: #f2f2f2;
+    border-radius: 3px;
+    padding: 0 10px;
+    height: 100%
+}
+.ly_alert_msg_gray .txt {
+    color: #666;
+    font-size: 11px
+}
+.ly_loading {
+    max-width: 100%;
+    z-index: 50;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    text-align: center;
+    white-space: nowrap
+}
+.ly_loading:before {
+    vertical-align: middle
+}
+.ly_loading:after {
+    content: '';
+    width: 0;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle
+}
+.ly_loading .msgbox {
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, .95);
+    font-size: 0;
+    padding: 18px 10px
+}
+.ly_loading .ani_loading {
+    display: block;
+    height: 8px
+}
+.ly_loading .ani_loading .ani_obj1,
+.ly_loading .ani_loading .ani_obj2,
+.ly_loading .ani_loading .ani_obj3 {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 4px;
+    background-color: #00c73c;
+    -webkit-animation: sk-bouncedelay .8s infinite;
+    animation: sk-bouncedelay .8s infinite
+}
+.ly_loading .ani_loading .ani_obj1 {
+    -webkit-animation-delay: -.3s;
+    animation-delay: -.3s
+}
+.ly_loading .ani_loading .ani_obj,
+.ly_loading .ani_loading .ani_obj2 {
+    -webkit-animation-delay: -.15s;
+    animation-delay: -.15s
+}
+.ly_loading .ani_loading .ani_obj3 {
+    margin-right: 0
+}
+.u_prm {
+    min-width: 290px;
+    background: #e8f1f8;
+    text-align: center;
+    position: relative;
+    padding: 0 30px 0 0;
+    min-height: 29px;
+    line-height: 29px
+}
+.u_prm .cls_bn,
+.u_prm .ic_evt,
+.u_prm .ic_new,
+.u_prm .ic_tip,
+.u_prm a {
+    background-image: url(https://ssl.pstatic.net/static/m/pwe/im/ic_cmnprm.png);
+    background-repeat: no-repeat;
+    background-size: 34px 103px
+}
+@media screen and (-webkit-min-device-pixel-ratio: 1.5) {
+    .u_prm .cls_bn,
+    .u_prm .ic_evt,
+    .u_prm .ic_new,
+    .u_prm .ic_tip,
+    .u_prm a {
+        background-image: url(https://ssl.pstatic.net/static/m/pwe/im/ic_cmnprm_rtn.png)
+    }
+}
+.u_prm a {
+    background-position: 100% -23px;
+    padding-right: 7px
+}
+.u_prm a.nobu {
+    background: 0 0;
+    padding-right: 0
+}
+.u_prm .type_img a {
+    display: inline-block;
+    background: 0 0;
+    padding: 0
+}
+.u_prm .type_img a img {
+    vertical-align: top;
+    max-width: 320px
+}
+.u_prm .cls_bn {
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    background-position: 10px 10px;
+    font-size: 1px;
+    text-indent: -10000px;
+    overflow: hidden;
+    background-color: transparent
+}
+.u_prm strong {
+    font-weight: 700
+}
+.u_prm .ic_evt,
+.u_prm .ic_new,
+.u_prm .ic_tip {
+    display: inline-block;
+    height: 13px;
+    line-height: 13px;
+    margin-right: 7px;
+    vertical-align: 2px;
+    font-size: 8px;
+    color: transparent;
+    background-color: #4a9ff0;
+    overflow: hidden
+}
+.u_prm .ic_new {
+    background-position: 0 -44px;
+    width: 24px
+}
+.u_prm .ic_tip {
+    background-position: 0 -67px;
+    width: 21px
+}
+.u_prm .ic_evt {
+    background-position: 0 -90px;
+    width: 34px
+}
+.msg_area {
+    padding: 75px 15px 0;
+    text-align: center
+}
+.msg_area h2,
+.msg_area p {
+    display: block;
+    line-height: 21px;
+    text-align: center
+}
+.msg_area h2 {
+    font-size: 1.09em;
+    color: #111;
+    font-weight: 400
+}
+.msg_area h2 strong {
+    color: #00c73c;
+    font-weight: 400
+}
+.msg_area h2 span {
+    display: block
+}
+.msg_area p {
+    padding: 9px 0 0;
+    font-size: 1em;
+    font-weight: 400;
+    color: #999
+}
+.msg_area h2:before {
+    content: '';
+    display: inline-block;
+    margin-bottom: 18px;
+    vertical-align: top
+}
+.msg_area.caution h2:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: 0 0;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 65px;
+    height: 65px;
+    display: inline-block;
+    vertical-align: top
+}
+.msg_area.action h2:before {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -68px 0;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 65px;
+    height: 65px;
+    display: inline-block;
+    vertical-align: top
+}
+.msg_area .bt {
+    padding: 20px 0 0
+}
+.msg_area .bt button+button {
+    margin-left: 4px
+}
+.msg_area button {
+    border: 1px solid #dfdfdf;
+    border-radius: 0;
+    background-color: #f9f9f9;
+    color: #666;
+    font-size: 13px;
+    height: 35px;
+    line-height: 33px;
+    min-width: 97px
+}
+.msg_area .lst {
+    margin: 30px 0 0;
+    border: 1px solid #e6e6e6
+}
+.msg_area .lst li {
+    border-top: 1px solid #f3f3f3;
+    padding: 12px 10px 12px 16px;
+    font-size: 13px;
+    color: #000;
+    line-height: 1.1em;
+    text-align: left
+}
+.msg_area .lst li:first-child {
+    border-top: 0 none
+}
+.m_ly {
+    position: fixed;
+    width: 84.4%;
+    top: 50%;
+    left: 50%;
+    z-index: 50;
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 0;
+    transform: translate3d(-50%, -50%, 0);
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    box-shadow: 0 0 2px #888
+}
+.m_ly .btn_close {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    font-size: 0;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    padding: 10px
+}
+.m_ly .btn_close:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -358px -150px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    vertical-align: top
+}
+.m_ly .context .h_ctt,
+.m_ly div .hd {
+    background-color: #00c73c;
+    color: #fff;
+    font-size: 15px;
+    height: 43px;
+    line-height: 43px;
+    text-align: center;
+    padding: 0 18px
+}
+.m_ly .context .h_ctt .name,
+.m_ly .context .h_ctt .tit,
+.m_ly div .hd .name,
+.m_ly div .hd .tit {
+    font-weight: 400;
+    font-size: 1em
+}
+.m_ly .address .hd .name em {
+    padding-left: 4px;
+    font-size: .7em;
+    font-weight: 400;
+    line-height: 1.1em;
+    vertical-align: 2px
+}
+.m_ly .address .hd .desc {
+    padding: 5px 0 0;
+    font-size: .9em;
+    color: #777
+}
+.m_ly .address .alert {
+    padding: 28px 0 21px;
+    font-size: 13px;
+    color: #111;
+    line-height: 17px;
+    text-align: center
+}
+.m_ly .address .alert strong {
+    color: red;
+    font-weight: 400
+}
+.m_ly .address .alert .desc {
+    display: block;
+    margin: 6px 0 0;
+    font-size: 11px;
+    color: #777
+}
+.m_ly .address .tx_alert {
+    padding: 17px 17px 19px;
+    font-size: 1em;
+    color: #333;
+    line-height: 1.4em;
+    text-align: center
+}
+.m_ly .file_upload .file_lst {
+    padding: 10px 18px 10px 17px
+}
+.m_ly .file_upload .file_lst li {
+    position: relative;
+    padding: 4px 77px 4px 0;
+    line-height: 18px
+}
+.m_ly .file_upload .file_lst li .file span,
+.m_ly .file_upload .file_lst li .file strong {
+    display: inline-block;
+    vertical-align: top
+}
+.m_ly .file_upload .file_lst li .file strong {
+    font-size: 12px;
+    max-width: 75%;
+    overflow: hidden;
+    color: #333;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: 400;
+    margin-right: 4px
+}
+.m_ly .file_upload .file_lst li .file span {
+    font-size: 11px;
+    color: #999;
+    vertical-align: top
+}
+.m_ly .file_upload .file_lst li .upload {
+    position: absolute;
+    top: 50%;
+    margin-top: -3px;
+    right: 0;
+    width: 65px;
+    height: 6px;
+    overflow: hidden;
+    background-color: #ebebeb;
+    border-radius: 6px;
+    font-size: .95em;
+    color: #34bc5e
+}
+.m_ly .file_upload .file_lst li .upload.complete {
+    top: 4px;
+    margin-top: 0;
+    height: auto;
+    background: 0 0;
+    font-size: .95em;
+    color: #34bc5e
+}
+.m_ly .file_upload .file_lst li .upload span {
+    display: inline-block;
+    height: 100%;
+    background-color: #34bc5e;
+    overflow: hidden;
+    font-size: 0;
+    color: transparent;
+    line-height: 0;
+    vertical-align: top;
+    border-radius: 6px
+}
+.m_ly .file_upload .noti {
+    padding: 10px 0 11px 18px;
+    font-size: 10px;
+    color: #999;
+    text-align: left;
+    border-top: 1px solid #e9e9e9;
+    line-height: 14px
+}
+.m_ly .file_upload .noti em {
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -308px -173px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+    margin: 0 4px 0 0;
+    font-size: 0;
+    color: transparent;
+    line-height: 0;
+    vertical-align: top
+}
+.m_ly .file_upload .bt {
+    padding-bottom: 16px
+}
+.m_ly .bt {
+    padding: 0 17px 26px;
+    height: 39px;
+    text-align: center;
+    font-size: 0
+}
+.m_ly .bt button {
+    border-radius: 0;
+    padding: 0;
+    font-size: 0;
+    font-size: 13px;
+    color: #666;
+    box-sizing: border-box;
+    border: 1px solid #dfdfdf;
+    background-color: #f9f9f9;
+    height: 35px;
+    line-height: 33px;
+    min-width: 97px
+}
+.m_ly .bt button.last {
+    margin-left: 5px;
+    border-radius: 0;
+    padding: 0;
+    font-size: 0;
+    font-size: 13px;
+    color: #fff;
+    box-sizing: border-box;
+    border: 1px solid #00b637;
+    background-color: #00c73c
+}
+.m_ly .context ul li {
+    padding: 0;
+    border-bottom: 1px solid #e9e9e9
+}
+.m_ly .context .h_ctt {
+    text-align: left
+}
+.m_ly .context ul li a {
+    text-decoration: none!important
+}
+.m_ly .context ul li a,
+.m_ly .context ul li span {
+    display: block;
+    padding: 0 19px;
+    color: #333;
+    font-size: 13px;
+    height: 42px;
+    line-height: 42px
+}
+.m_ly .context ul li:active {
+    position: relative;
+    background-color: #22b24e;
+    border-color: #1b8e3e
+}
+.m_ly .context ul li:active a,
+.m_ly .context ul li:active span {
+    color: #fff
+}
+.m_ly .context ul li:last-child {
+    border-bottom: 0
+}
+.m_ly .context ul li span {
+    position: relative
+}
+.m_ly .context ul li span select {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    height: 100%;
+    max-width: none;
+    width: 100%;
+    opacity: 0
+}
+.m_ly.m_captcha button {
+    display: inline-block;
+    height: 27px;
+    margin: 0;
+    padding: 0 7px;
+    overflow: hidden;
+    border: 1px solid #afafaf;
+    border-radius: 3px;
+    font-size: .95em;
+    color: #666;
+    vertical-align: middle
+}
+.m_ly.m_captcha button.btn_close {
+    border: 0;
+    height: auto;
+    padding: 5px;
+    border-radius: 0;
+    vertical-align: top;
+    top: 10px;
+    right: 10px
+}
+.m_ly.m_captcha .alert {
+    padding: 23px 25px 10px
+}
+.m_ly.m_captcha .alert .desc {
+    line-height: 15px
+}
+.m_ly.m_captcha .captcha {
+    text-align: center;
+    padding-top: 6px;
+    padding-bottom: 20px
+}
+.m_ly.m_captcha .captcha .box {
+    display: inline-block;
+    border: 1px solid #e2e2e2;
+    vertical-align: bottom;
+    height: 45px;
+    margin-right: 3px
+}
+.m_ly.m_captcha .captcha .box img {
+    vertical-align: top;
+    height: 100%;
+    width: auto
+}
+.m_ly.m_captcha .captcha button {
+    border: 1px solid #dedede;
+    font-size: 0;
+    border-radius: 0;
+    vertical-align: bottom
+}
+.m_ly.m_captcha .captcha button:before {
+    content: '';
+    background-image: url(https://ssl.pstatic.net/static/m/mail/cp_nmail_801509.png);
+    background-position: -340px -173px;
+    background-size: 509px 232px;
+    background-repeat: no-repeat;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    vertical-align: top
+}
+.m_ly.m_captcha .inp_box {
+    border-top: 1px solid #e9e9e9;
+    padding: 15px 0 20px;
+    text-align: center
+}
+.m_ly.m_captcha .inp_box input {
+    width: 156px;
+    height: 34px;
+    border: 1px solid #e9e9e9;
+    vertical-align: top;
+    box-sizing: border-box;
+    margin-right: 4px;
+    font-size: 13px;
+    color: #111;
+    padding-left: 8px;
+    -webkit-appearance: none;
+    border-radius: 0
+}
+.m_ly.m_captcha .inp_box button {
+    border-radius: 0;
+    padding: 0;
+    font-size: 0;
+    font-size: 13px;
+    color: #fff;
+    box-sizing: border-box;
+    border: 1px solid #00b637;
+    background-color: #00c73c;
+    height: 34px;
+    min-width: 45px
+}
+#__bs_notify__ {
+    top: auto!important;
+    bottom: 0!important;
+    opacity: .3!important;
+    left: 0!important;
+    right: 0!important;
+    padding: 2px 0!important
+}
